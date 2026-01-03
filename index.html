@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
@@ -10,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #020617; color: #f8fafc; }
+        body { font-family: 'Inter', sans-serif; background-color: #020617; color: #f8fafc; margin: 0; }
         .font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
         .gradient-text {
             background: linear-gradient(135deg, #fff 0%, #38bdf8 100%);
@@ -54,7 +55,7 @@
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-bold uppercase tracking-widest mb-8">
                 <i data-lucide="zap" class="w-3 h-3 fill-current"></i> Agentes entrenados por Top Closers
             </div>
-            <h1 class="text-5xl md:text-7xl font-jakarta font-extrabold mb-8 leading-[1.1] tracking-tight">
+            <h1 class="text-5xl md:text-7xl font-jakarta font-extrabold mb-8 leading-[1.1] tracking-tight text-white">
                 Vende más y escala con <span class="gradient-text">Human Agents</span>
             </h1>
             <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
@@ -88,12 +89,12 @@
         </div>
     </section>
 
-    <!-- Sellpoints / Garantía -->
+    <!-- Garantía -->
     <section class="py-24 bg-slate-900/40 border-y border-white/5">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 class="text-3xl md:text-5xl font-jakarta font-extrabold mb-6 leading-tight">
+                    <h2 class="text-3xl md:text-5xl font-jakarta font-extrabold mb-6 leading-tight text-white">
                         “Con el mismo gasto en ads, <span class="text-sky-400">te subo las ventas.”</span>
                     </h2>
                     <p class="text-slate-400 text-lg mb-8 italic border-l-2 border-sky-500 pl-6">
@@ -102,21 +103,16 @@
                     <div class="space-y-4">
                         <div class="flex items-start gap-3">
                             <i data-lucide="check-circle-2" class="w-6 h-6 text-sky-400 mt-1"></i>
-                            <p class="text-slate-200 font-medium text-lg">Si no aumentamos conversaciones calificadas, no seguimos.</p>
+                            <p class="text-slate-200 font-medium text-lg italic">“Si no aumentamos conversaciones calificadas, no seguimos.”</p>
                         </div>
                         <div class="flex items-start gap-3">
                             <i data-lucide="check-circle-2" class="w-6 h-6 text-sky-400 mt-1"></i>
                             <p class="text-slate-200 font-medium text-lg">Reducimos no-shows un 20–30% con seguimiento pre-call.</p>
                         </div>
-                        <div class="flex items-start gap-3">
-                            <i data-lucide="check-circle-2" class="w-6 h-6 text-sky-400 mt-1"></i>
-                            <p class="text-slate-200 font-medium text-lg">Tu equipo deja de perder 6 horas cargando reportes en el CRM.</p>
-                        </div>
                     </div>
                 </div>
                 <div class="glass p-8 md:p-12 rounded-[2.5rem] border-sky-500/20 relative">
-                    <div class="absolute -top-4 -right-4 bg-sky-500 text-slate-950 text-xs font-black px-4 py-2 rounded-lg rotate-3 shadow-xl">ELITE AI</div>
-                    <h3 class="text-2xl font-bold font-jakarta mb-8">Capacidades del Agente:</h3>
+                    <h3 class="text-2xl font-bold font-jakarta mb-8 text-white">Capacidades del Agente:</h3>
                     <ul class="space-y-6">
                         <li class="flex items-center gap-4 text-slate-300">
                             <i data-lucide="message-square" class="text-sky-400"></i> Atiende WhatsApp e Instagram
@@ -126,9 +122,6 @@
                         </li>
                         <li class="flex items-center gap-4 text-slate-300">
                             <i data-lucide="database" class="text-sky-400"></i> Mantiene el CRM limpio
-                        </li>
-                        <li class="flex items-center gap-4 text-slate-300">
-                            <i data-lucide="shield-check" class="text-sky-400"></i> Asiste al closer post-llamada
                         </li>
                         <li class="flex items-center gap-4 text-slate-300">
                             <i data-lucide="credit-card" class="text-sky-400"></i> Persigue el pago hasta cobrar
@@ -152,20 +145,17 @@
                         <div class="flex items-center gap-3 opacity-80">
                             <i data-lucide="clock" class="w-4 h-4"></i> Respuesta en menos de 2h
                         </div>
-                        <div class="flex items-center gap-3 opacity-80">
-                            <i data-lucide="target" class="w-4 h-4"></i> Diagnóstico 100% gratuito
-                        </div>
                     </div>
                 </div>
                 <div class="p-12 bg-slate-900/50" id="form-container">
                     <form onsubmit="handleSubmit(event)" class="space-y-6">
                         <div>
                             <label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Nombre Completo</label>
-                            <input required type="text" class="w-full bg-slate-800 border border-white/10 rounded-xl px-5 py-4 focus:border-sky-500 outline-none transition-all placeholder:text-slate-600" placeholder="Juan Pérez">
+                            <input required type="text" class="w-full bg-slate-800 border border-white/10 rounded-xl px-5 py-4 text-white focus:border-sky-500 outline-none transition-all" placeholder="Juan Pérez">
                         </div>
                         <div>
                             <label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">WhatsApp / Email</label>
-                            <input required type="text" class="w-full bg-slate-800 border border-white/10 rounded-xl px-5 py-4 focus:border-sky-500 outline-none transition-all placeholder:text-slate-600" placeholder="+34 600 000 000">
+                            <input required type="text" class="w-full bg-slate-800 border border-white/10 rounded-xl px-5 py-4 text-white focus:border-sky-500 outline-none transition-all" placeholder="+34 600 000 000">
                         </div>
                         <button type="submit" class="w-full bg-sky-500 hover:bg-sky-400 text-slate-950 font-extrabold py-5 rounded-xl flex items-center justify-center gap-3 transition-all hover:scale-[1.02] shadow-xl">
                             SOLICITAR EVALUACIÓN <i data-lucide="arrow-right" class="w-5 h-5"></i>
@@ -178,28 +168,24 @@
 
     <!-- Footer -->
     <footer class="py-12 border-t border-white/5 text-center text-slate-600">
-        <div class="flex flex-col items-center mb-6 leading-none select-none">
-            <span class="text-sm font-extrabold font-jakarta tracking-tighter">HUMAN</span>
-            <span class="text-sm font-medium font-jakarta tracking-tighter text-sky-400">AGENTS</span>
-        </div>
-        <p class="text-xs">© 2024 Human Agents. Inteligencia Artificial aplicada a Cierre de Ventas.</p>
+        <p class="text-xs">© 2024 Human Agents. Inteligencia Artificial para Ventas.</p>
     </footer>
 
     <script>
         // Inicializar Iconos
         lucide.createIcons();
 
-        // Manejar Envío de Formulario
+        // Manejar Envío
         function handleSubmit(e) {
             e.preventDefault();
             const container = document.getElementById('form-container');
             container.innerHTML = `
-                <div class="h-full flex flex-col items-center justify-center text-center py-10 animate-in fade-in zoom-in duration-500">
+                <div class="h-full flex flex-col items-center justify-center text-center py-10">
                     <div class="w-20 h-20 bg-sky-500/20 rounded-full flex items-center justify-center mb-6">
                         <i data-lucide="check-circle" class="w-10 h-10 text-sky-400"></i>
                     </div>
-                    <h3 class="text-3xl font-bold font-jakarta mb-4">¡Recibido!</h3>
-                    <p class="text-slate-400">Un especialista te contactará por WhatsApp en las próximas horas.</p>
+                    <h3 class="text-3xl font-bold text-white mb-2">¡Recibido!</h3>
+                    <p class="text-slate-400">Te contactaremos hoy mismo.</p>
                 </div>
             `;
             lucide.createIcons();
