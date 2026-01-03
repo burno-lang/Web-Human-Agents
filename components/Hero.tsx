@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
 
@@ -12,50 +13,44 @@ const Hero: React.FC = () => {
         <div className="text-center max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-6 animate-fade-in">
             <span className="flex h-2 w-2 rounded-full bg-sky-500 animate-pulse"></span>
-            Nueva Generación de Ventas IA
+            Agentes Entrenados por Top Closers
           </div>
           
           <h1 className="text-5xl md:text-7xl font-jakarta font-extrabold tracking-tight mb-8 leading-tight">
-            Agentes de IA que Venden Como <span className="gradient-text">Humanos</span>, Pero Sin Descansar.
+            Vende más y escala con <span className="gradient-text">Human Agents</span>
           </h1>
           
           <p className="text-lg md:text-xl text-slate-400 mb-10 leading-relaxed max-w-2xl mx-auto">
-            Entrenados por top closers para agendar llamadas, automatizar tu CRM y cerrar ventas en WhatsApp e Instagram. 
-            <span className="text-slate-200"> Tu equipo deja de perder 6 horas semanales en tareas administrativas.</span>
+            Atiende leads 24/7, agenda citas calificadas y automatiza tu CRM. 
+            <span className="text-slate-200"> Deja que la IA haga el trabajo pesado mientras tu equipo cierra ventas.</span>
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="#agenda" 
-              className="group flex items-center justify-center gap-2 bg-[#38BDF8] hover:bg-sky-400 text-slate-950 px-8 py-4 rounded-xl text-lg font-bold transition-all hover:scale-105 shadow-lg shadow-sky-900/20"
+              className="group flex items-center justify-center gap-2 bg-[#38BDF8] hover:bg-sky-400 text-slate-950 px-10 py-4 rounded-xl text-lg font-bold transition-all hover:scale-105 shadow-xl shadow-sky-500/20"
             >
-              Agendar Sesión de Evaluación
+              Agendar Evaluación Gratuita
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
-            <a 
-              href="#soluciones" 
-              className="flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all"
-            >
-              Ver Soluciones
             </a>
           </div>
 
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-slate-800 pt-12">
             <div>
               <div className="text-3xl font-bold font-jakarta text-white">+30%</div>
-              <div className="text-slate-500 text-sm mt-1">Asistencia a llamadas</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold font-jakarta text-white">24/7</div>
-              <div className="text-slate-500 text-sm mt-1">Atención Inmediata</div>
+              <div className="text-slate-500 text-sm mt-1">Más citas agendadas</div>
             </div>
             <div>
               <div className="text-3xl font-bold font-jakarta text-white">0s</div>
-              <div className="text-slate-500 text-sm mt-1">Carga de CRM</div>
+              <div className="text-slate-500 text-sm mt-1">Tiempo de respuesta</div>
             </div>
             <div>
               <div className="text-3xl font-bold font-jakarta text-white">100%</div>
-              <div className="text-slate-500 text-sm mt-1">Follow-up Automático</div>
+              <div className="text-slate-500 text-sm mt-1">CRM Actualizado</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold font-jakarta text-white">-6h</div>
+              <div className="text-slate-500 text-sm mt-1">Admin semanal/vendedor</div>
             </div>
           </div>
         </div>

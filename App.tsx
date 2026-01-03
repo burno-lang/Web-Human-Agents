@@ -12,7 +12,6 @@ import LegalContent, { LegalType } from './components/LegalContent';
 function App() {
   const [view, setView] = useState<'home' | LegalType>('home');
 
-  // Scroll to top when switching views
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [view]);
