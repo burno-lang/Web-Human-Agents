@@ -1,58 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Human Agents | IA de Ventas de Alto Rendimiento</title>
-    <meta name="description" content="Agentes de IA entrenados por top closers para agendar llamadas, automatizar tu CRM y cerrar ventas en WhatsApp e Instagram 24/7.">
+    <meta name="description"
+        content="Agentes de IA entrenados por top closers para agendar llamadas, automatizar tu CRM y cerrar ventas en WhatsApp e Instagram 24/7.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
         }
-        h1, h2, h3, h4, .font-jakarta {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .font-jakarta {
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
+
         .gradient-text {
             background: linear-gradient(135deg, #ffffff 0%, #38BDF8 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+
         .glass-card {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
+
         .glow {
             box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
         }
+
         /* Hide sections initially for navigation */
-        .legal-section { display: none; }
-        .legal-section.active { display: block; }
-        .home-section.hidden { display: none; }
+        .legal-section {
+            display: none;
+        }
+
+        .legal-section.active {
+            display: block;
+        }
+
+        .home-section.hidden {
+            display: none;
+        }
     </style>
 </head>
+
 <body class="bg-slate-950 text-slate-100 overflow-x-hidden">
-    
+
     <!-- Navbar -->
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-6">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            <a href="#" onclick="showHome(); return false;" class="flex flex-col items-start hover:opacity-80 transition-opacity cursor-pointer leading-none">
+            <a href="#" onclick="showHome(); return false;"
+                class="flex flex-col items-start hover:opacity-80 transition-opacity cursor-pointer leading-none">
                 <span class="text-[1.4rem] font-extrabold font-jakarta tracking-tight text-white">HUMAN</span>
                 <span class="text-[1.4rem] font-medium font-jakarta tracking-tight text-[#38BDF8]">AGENTS</span>
             </a>
-            
+
             <div class="flex items-center gap-4">
-                <a 
-                    href="#soluciones"
-                    class="bg-[#38BDF8] hover:bg-sky-400 text-slate-950 px-6 py-2.5 rounded-full text-sm font-bold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-sky-500/20"
-                >
-                    Ver Soluciones
+                <a href="#agenda"
+                    class="bg-[#38BDF8] hover:bg-sky-400 text-slate-950 px-6 py-2.5 rounded-full text-sm font-bold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-sky-500/20">
+                    Agendar Sesión de Evaluación
                 </a>
             </div>
         </div>
@@ -64,38 +85,46 @@
             <!-- Hero Section -->
             <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
                 <!-- Background Orbs -->
-                <div class="absolute top-0 -left-20 w-72 h-72 bg-blue-600/10 rounded-full blur-[100px] pointer-events-none"></div>
-                <div class="absolute top-1/2 -right-20 w-96 h-96 bg-sky-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+                <div
+                    class="absolute top-0 -left-20 w-72 h-72 bg-blue-600/10 rounded-full blur-[100px] pointer-events-none">
+                </div>
+                <div
+                    class="absolute top-1/2 -right-20 w-96 h-96 bg-sky-500/10 rounded-full blur-[120px] pointer-events-none">
+                </div>
 
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div class="text-center max-w-4xl mx-auto">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-6">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-6">
                             <span class="flex h-2 w-2 rounded-full bg-sky-500 animate-pulse"></span>
                             Nueva Generación de Ventas IA
                         </div>
-                        
+
                         <h1 class="text-5xl md:text-7xl font-jakarta font-extrabold tracking-tight mb-8 leading-tight">
-                            Agentes de IA que Venden Como <span class="gradient-text">Humanos</span>, Pero Sin Descansar.
+                            Agentes de IA que Venden Como <span class="gradient-text">Humanos</span>, Pero Sin
+                            Descansar.
                         </h1>
-                        
+
                         <p class="text-lg md:text-xl text-slate-400 mb-10 leading-relaxed max-w-2xl mx-auto">
-                            Entrenados por top closers para agendar llamadas, automatizar tu CRM y cerrar ventas en WhatsApp e Instagram. 
-                            <span class="text-slate-200"> Tu equipo deja de perder 6 horas semanales en tareas administrativas.</span>
+                            Entrenados por top closers para agendar llamadas, automatizar tu CRM y cerrar ventas en
+                            WhatsApp e Instagram.
+                            <span class="text-slate-200"> Tu equipo deja de perder 6 horas semanales en tareas
+                                administrativas.</span>
                         </p>
-                        
+
                         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a 
-                                href="#proceso" 
-                                class="group flex items-center justify-center gap-2 bg-[#38BDF8] hover:bg-sky-400 text-slate-950 px-8 py-4 rounded-xl text-lg font-bold transition-all hover:scale-105 shadow-lg shadow-sky-900/20"
-                            >
-                                Conoce el Proceso
-                                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            <a href="#agenda"
+                                class="group flex items-center justify-center gap-2 bg-[#38BDF8] hover:bg-sky-400 text-slate-950 px-8 py-4 rounded-xl text-lg font-bold transition-all hover:scale-105 shadow-lg shadow-sky-900/20">
+                                Quiero Mi Sesión de Evaluación
+                                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
                             </a>
-                            <a 
-                                href="#soluciones" 
-                                class="flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all"
-                            >
-                                Ver Soluciones
+                            <a href="#agenda"
+                                class="flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all">
+                                Agendar Demo
                             </a>
                         </div>
 
@@ -125,58 +154,108 @@
             <section id="soluciones" class="py-24 bg-slate-900/50">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-16">
-                        <h2 class="text-3xl md:text-5xl font-jakarta font-extrabold mb-4">Un equipo de ventas élite, <br/><span class="text-blue-500">dentro de tu software.</span></h2>
-                        <p class="text-slate-400 text-lg max-w-2xl mx-auto">Nuestros agentes no solo responden; ejecutan todo el proceso comercial de punta a punta.</p>
+                        <h2 class="text-3xl md:text-5xl font-jakarta font-extrabold mb-4">Un equipo de ventas élite,
+                            <br /><span class="text-blue-500">dentro de tu software.</span>
+                        </h2>
+                        <p class="text-slate-400 text-lg max-w-2xl mx-auto">Nuestros agentes no solo responden; ejecutan
+                            todo el proceso comercial de punta a punta.</p>
                     </div>
 
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- Feature 1 -->
-                        <div class="glass-card p-8 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group">
-                            <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600/20 transition-colors">
-                                <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                        <div
+                            class="glass-card p-8 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group">
+                            <div
+                                class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600/20 transition-colors">
+                                <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                                    </path>
+                                </svg>
                             </div>
                             <h3 class="text-xl font-bold font-jakarta mb-3">Omnicanalidad Reactiva</h3>
-                            <p class="text-slate-400 leading-relaxed">Atiende todos los leads en WhatsApp e Instagram en menos de 30 segundos, con el tono y conocimiento de un closer experto.</p>
+                            <p class="text-slate-400 leading-relaxed">Atiende todos los leads en WhatsApp e Instagram en
+                                menos de 30 segundos, con el tono y conocimiento de un closer experto.</p>
                         </div>
                         <!-- Feature 2 -->
-                        <div class="glass-card p-8 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group">
-                            <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600/20 transition-colors">
-                                <svg class="w-6 h-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        <div
+                            class="glass-card p-8 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group">
+                            <div
+                                class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600/20 transition-colors">
+                                <svg class="w-6 h-6 text-teal-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                    </path>
+                                </svg>
                             </div>
                             <h3 class="text-xl font-bold font-jakarta mb-3">Setter de Alta Conversión</h3>
-                            <p class="text-slate-400 leading-relaxed">Califica prospectos y agenda llamadas directamente en tu calendario. Identifica al cliente ideal y descarta curiosos.</p>
+                            <p class="text-slate-400 leading-relaxed">Califica prospectos y agenda llamadas directamente
+                                en tu calendario. Identifica al cliente ideal y descarta curiosos.</p>
                         </div>
                         <!-- Feature 3 -->
-                        <div class="glass-card p-8 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group">
-                            <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600/20 transition-colors">
-                                <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                        <div
+                            class="glass-card p-8 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group">
+                            <div
+                                class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600/20 transition-colors">
+                                <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+                                    </path>
+                                </svg>
                             </div>
                             <h3 class="text-xl font-bold font-jakarta mb-3">Reducción de No-Shows</h3>
-                            <p class="text-slate-400 leading-relaxed">Seguimiento inteligente pre-call que reduce el absentismo entre un 20% y 30% mediante recordatorios estratégicos.</p>
+                            <p class="text-slate-400 leading-relaxed">Seguimiento inteligente pre-call que reduce el
+                                absentismo entre un 20% y 30% mediante recordatorios estratégicos.</p>
                         </div>
                         <!-- Feature 4 -->
-                        <div class="glass-card p-8 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group">
-                            <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600/20 transition-colors">
-                                <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+                        <div
+                            class="glass-card p-8 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group">
+                            <div
+                                class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600/20 transition-colors">
+                                <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4">
+                                    </path>
+                                </svg>
                             </div>
                             <h3 class="text-xl font-bold font-jakarta mb-3">CRM Autogestionado</h3>
-                            <p class="text-slate-400 leading-relaxed">Mantiene el CRM limpio sin esfuerzo humano. Rellena campos, crea negocios y genera reportes diarios automáticamente.</p>
+                            <p class="text-slate-400 leading-relaxed">Mantiene el CRM limpio sin esfuerzo humano.
+                                Rellena campos, crea negocios y genera reportes diarios automáticamente.</p>
                         </div>
                         <!-- Feature 5 -->
-                        <div class="glass-card p-8 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group">
-                            <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600/20 transition-colors">
-                                <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        <div
+                            class="glass-card p-8 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group">
+                            <div
+                                class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600/20 transition-colors">
+                                <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                    </path>
+                                </svg>
                             </div>
                             <h3 class="text-xl font-bold font-jakarta mb-3">Asistente Post-Llamada</h3>
-                            <p class="text-slate-400 leading-relaxed">Analiza la reunión, ofrece feedback de mejora al equipo y gestiona objeciones post-llamada para empujar el cierre.</p>
+                            <p class="text-slate-400 leading-relaxed">Analiza la reunión, ofrece feedback de mejora al
+                                equipo y gestiona objeciones post-llamada para empujar el cierre.</p>
                         </div>
                         <!-- Feature 6 -->
-                        <div class="glass-card p-8 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group">
-                            <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600/20 transition-colors">
-                                <svg class="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                        <div
+                            class="glass-card p-8 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group">
+                            <div
+                                class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600/20 transition-colors">
+                                <svg class="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z">
+                                    </path>
+                                </svg>
                             </div>
                             <h3 class="text-xl font-bold font-jakarta mb-3">Cierre y Cobro</h3>
-                            <p class="text-slate-400 leading-relaxed">Persigue el pago hasta cobrar. Reconoce capturas de pantalla, transferencias y confirma la entrada de capital.</p>
+                            <p class="text-slate-400 leading-relaxed">Persigue el pago hasta cobrar. Reconoce capturas
+                                de pantalla, transferencias y confirma la entrada de capital.</p>
                         </div>
                     </div>
                 </div>
@@ -188,35 +267,57 @@
                     <div class="grid lg:grid-cols-2 gap-16 items-center">
                         <div>
                             <h2 class="text-3xl md:text-5xl font-jakarta font-extrabold mb-8 leading-tight">
-                                Más barato que 1 Setter Junior. <br/>
+                                Más barato que 1 Setter Junior. <br />
                                 Rinde como <span class="text-teal-400">3 Seniors.</span>
                             </h2>
                             <p class="text-slate-400 text-lg mb-8">
-                                "Si hoy perdés leads, tenés no-shows o tu CRM es un desastre, esto no es opcional. Con el mismo gasto en ads, te subimos agendas, asistencia y cierres sin contratar más personal."
+                                "Si hoy perdés leads, tenés no-shows o tu CRM es un desastre, esto no es opcional. Con
+                                el mismo gasto en ads, te subimos agendas, asistencia y cierres sin contratar más
+                                personal."
                             </p>
-                            
+
                             <ul class="space-y-4">
                                 <li class="flex items-center gap-3 text-slate-200">
-                                    <div class="flex-shrink-0 w-6 h-6 bg-teal-500/10 rounded-full flex items-center justify-center">
-                                        <svg class="w-4 h-4 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <div
+                                        class="flex-shrink-0 w-6 h-6 bg-teal-500/10 rounded-full flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-teal-400" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7"></path>
+                                        </svg>
                                     </div>
                                     Garantía: Si no aumentamos conversaciones calificadas, no seguimos.
                                 </li>
                                 <li class="flex items-center gap-3 text-slate-200">
-                                    <div class="flex-shrink-0 w-6 h-6 bg-teal-500/10 rounded-full flex items-center justify-center">
-                                        <svg class="w-4 h-4 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <div
+                                        class="flex-shrink-0 w-6 h-6 bg-teal-500/10 rounded-full flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-teal-400" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7"></path>
+                                        </svg>
                                     </div>
                                     Reducción del 30% en no-shows pre-call.
                                 </li>
                                 <li class="flex items-center gap-3 text-slate-200">
-                                    <div class="flex-shrink-0 w-6 h-6 bg-teal-500/10 rounded-full flex items-center justify-center">
-                                        <svg class="w-4 h-4 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <div
+                                        class="flex-shrink-0 w-6 h-6 bg-teal-500/10 rounded-full flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-teal-400" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7"></path>
+                                        </svg>
                                     </div>
                                     Liberamos 6 horas/semana por vendedor.
                                 </li>
                                 <li class="flex items-center gap-3 text-slate-200">
-                                    <div class="flex-shrink-0 w-6 h-6 bg-teal-500/10 rounded-full flex items-center justify-center">
-                                        <svg class="w-4 h-4 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <div
+                                        class="flex-shrink-0 w-6 h-6 bg-teal-500/10 rounded-full flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-teal-400" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7"></path>
+                                        </svg>
                                     </div>
                                     Entrenamiento basado en top closers del mercado.
                                 </li>
@@ -224,9 +325,13 @@
                         </div>
 
                         <div class="relative">
-                            <div class="absolute -inset-4 bg-gradient-to-tr from-blue-600/20 to-teal-400/20 blur-2xl rounded-3xl"></div>
-                            <div class="relative glass-card rounded-3xl overflow-hidden border border-slate-700 shadow-2xl">
-                                <div class="p-6 bg-slate-800/50 border-b border-slate-700 font-bold font-jakarta flex justify-between">
+                            <div
+                                class="absolute -inset-4 bg-gradient-to-tr from-blue-600/20 to-teal-400/20 blur-2xl rounded-3xl">
+                            </div>
+                            <div
+                                class="relative glass-card rounded-3xl overflow-hidden border border-slate-700 shadow-2xl">
+                                <div
+                                    class="p-6 bg-slate-800/50 border-b border-slate-700 font-bold font-jakarta flex justify-between">
                                     <span>Eficiencia Operativa</span>
                                     <span class="text-blue-400">Human Agents AI</span>
                                 </div>
@@ -238,7 +343,7 @@
                                     <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
                                         <div class="h-full bg-blue-500 w-[98%]"></div>
                                     </div>
-                                    
+
                                     <div class="flex justify-between items-center pt-4">
                                         <span class="text-slate-400">Consistencia en seguimiento</span>
                                         <span class="font-semibold">Impecable 24/7</span>
@@ -268,34 +373,76 @@
             <section id="proceso" class="py-24 bg-slate-900/30">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-20">
-                        <h2 class="text-3xl md:text-5xl font-jakarta font-extrabold mb-4">El camino al <span class="text-blue-500">Escalado Masivo.</span></h2>
-                        <p class="text-slate-400 text-lg max-w-2xl mx-auto">Implementamos tu agente en menos de 10 días, sin fricción para tu equipo actual.</p>
+                        <h2 class="text-3xl md:text-5xl font-jakarta font-extrabold mb-4">El camino al <span
+                                class="text-blue-500">Escalado Masivo.</span></h2>
+                        <p class="text-slate-400 text-lg max-w-2xl mx-auto">Implementamos tu agente en menos de 10 días,
+                            sin fricción para tu equipo actual.</p>
                     </div>
 
                     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         <div class="relative group">
-                            <div class="text-6xl font-black font-jakarta text-slate-800 group-hover:text-blue-900/30 transition-colors mb-4">01</div>
-                            <h3 class="text-xl font-bold font-jakarta mb-3 group-hover:text-blue-400 transition-colors">Auditoría de Ventas</h3>
-                            <p class="text-slate-400 leading-relaxed">Analizamos tu funnel actual, scripts y CRM para identificar fugas de leads y cuellos de botella.</p>
+                            <div
+                                class="text-6xl font-black font-jakarta text-slate-800 group-hover:text-blue-900/30 transition-colors mb-4">
+                                01</div>
+                            <h3 class="text-xl font-bold font-jakarta mb-3 group-hover:text-blue-400 transition-colors">
+                                Auditoría de Ventas</h3>
+                            <p class="text-slate-400 leading-relaxed">Analizamos tu funnel actual, scripts y CRM para
+                                identificar fugas de leads y cuellos de botella.</p>
                             <div class="hidden lg:block absolute top-12 -right-4 w-8 h-[2px] bg-slate-800"></div>
                         </div>
                         <div class="relative group">
-                            <div class="text-6xl font-black font-jakarta text-slate-800 group-hover:text-blue-900/30 transition-colors mb-4">02</div>
-                            <h3 class="text-xl font-bold font-jakarta mb-3 group-hover:text-blue-400 transition-colors">Entrenamiento del Agente</h3>
-                            <p class="text-slate-400 leading-relaxed">Clonamos el conocimiento de tus mejores vendedores e inyectamos la lógica de cierre de Human Agents.</p>
+                            <div
+                                class="text-6xl font-black font-jakarta text-slate-800 group-hover:text-blue-900/30 transition-colors mb-4">
+                                02</div>
+                            <h3 class="text-xl font-bold font-jakarta mb-3 group-hover:text-blue-400 transition-colors">
+                                Entrenamiento del Agente</h3>
+                            <p class="text-slate-400 leading-relaxed">Clonamos el conocimiento de tus mejores vendedores
+                                e inyectamos la lógica de cierre de Human Agents.</p>
                             <div class="hidden lg:block absolute top-12 -right-4 w-8 h-[2px] bg-slate-800"></div>
                         </div>
                         <div class="relative group">
-                            <div class="text-6xl font-black font-jakarta text-slate-800 group-hover:text-blue-900/30 transition-colors mb-4">03</div>
-                            <h3 class="text-xl font-bold font-jakarta mb-3 group-hover:text-blue-400 transition-colors">Integración de Sistemas</h3>
-                            <p class="text-slate-400 leading-relaxed">Conectamos con WhatsApp, Instagram y tu CRM (Hubspot, Pipedrive, etc.) de forma invisible.</p>
+                            <div
+                                class="text-6xl font-black font-jakarta text-slate-800 group-hover:text-blue-900/30 transition-colors mb-4">
+                                03</div>
+                            <h3 class="text-xl font-bold font-jakarta mb-3 group-hover:text-blue-400 transition-colors">
+                                Integración de Sistemas</h3>
+                            <p class="text-slate-400 leading-relaxed">Conectamos con WhatsApp, Instagram y tu CRM
+                                (Hubspot, Pipedrive, etc.) de forma invisible.</p>
                             <div class="hidden lg:block absolute top-12 -right-4 w-8 h-[2px] bg-slate-800"></div>
                         </div>
                         <div class="relative group">
-                            <div class="text-6xl font-black font-jakarta text-slate-800 group-hover:text-blue-900/30 transition-colors mb-4">04</div>
-                            <h3 class="text-xl font-bold font-jakarta mb-3 group-hover:text-blue-400 transition-colors">Lanzamiento y Optimización</h3>
-                            <p class="text-slate-400 leading-relaxed">El agente empieza a vender. Monitorizamos en tiempo real para ajustar scripts y maximizar ROI.</p>
+                            <div
+                                class="text-6xl font-black font-jakarta text-slate-800 group-hover:text-blue-900/30 transition-colors mb-4">
+                                04</div>
+                            <h3 class="text-xl font-bold font-jakarta mb-3 group-hover:text-blue-400 transition-colors">
+                                Lanzamiento y Optimización</h3>
+                            <p class="text-slate-400 leading-relaxed">El agente empieza a vender. Monitorizamos en
+                                tiempo real para ajustar scripts y maximizar ROI.</p>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Agenda Section with FunnelUp Form -->
+            <section id="agenda" class="py-24 bg-slate-900/50">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-5xl font-jakarta font-extrabold mb-4">Agenda Tu <span
+                                class="text-[#38BDF8]">Sesión de Evaluación</span></h2>
+                        <p class="text-slate-400 text-lg max-w-2xl mx-auto">Descubre cómo nuestros agentes de IA pueden
+                            transformar tus ventas en solo 10 días.</p>
+                    </div>
+
+                    <div class="glass-card rounded-3xl border border-slate-700 overflow-hidden"
+                        style="min-height: 600px;">
+                        <iframe src="https://api.funnelup.io/widget/form/oD9dIFrOvSmSx7zh92fY"
+                            style="width:100%;height:600px;border:none;border-radius:3px"
+                            id="inline-oD9dIFrOvSmSx7zh92fY" data-layout="{'id':'INLINE'}"
+                            data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated"
+                            data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value=""
+                            data-form-name="Human Agents" data-height="600"
+                            data-layout-iframe-id="inline-oD9dIFrOvSmSx7zh92fY" data-form-id="oD9dIFrOvSmSx7zh92fY"
+                            title="Human Agents"></iframe>
                     </div>
                 </div>
             </section>
@@ -303,108 +450,153 @@
 
         <!-- Legal Sections (hidden by default) -->
         <div id="legal-aviso" class="legal-section pt-32 pb-20 max-w-4xl mx-auto px-4">
-            <button onclick="showHome()" class="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors mb-12 group">
-                <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            <button onclick="showHome()"
+                class="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors mb-12 group">
+                <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
                 Volver al Inicio
             </button>
-            
+
             <h1 class="text-4xl md:text-5xl font-jakarta font-extrabold mb-12 text-white">Aviso Legal</h1>
-            
+
             <div class="glass-card p-8 md:p-12 rounded-3xl border border-slate-800">
                 <div class="space-y-6 text-slate-300">
-                    <p>En cumplimiento con el deber de información recogido en el artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSI-CE), se facilitan los siguientes datos:</p>
+                    <p>En cumplimiento con el deber de información recogido en el artículo 10 de la Ley 34/2002, de 11
+                        de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSI-CE), se
+                        facilitan los siguientes datos:</p>
                     <div>
                         <h3 class="text-white font-bold mb-2">1. Datos Identificativos</h3>
-                        <p>El titular del dominio web es HUMAN AGENTS S.L. (en adelante, HUMAN AGENTS), con domicilio a estos efectos en Madrid, España. Correo electrónico de contacto: hola@humanagents.ai.</p>
+                        <p>El titular del dominio web es HUMAN AGENTS S.L. (en adelante, HUMAN AGENTS), con domicilio a
+                            estos efectos en Madrid, España. Correo electrónico de contacto: hola@humanagents.ai.</p>
                     </div>
                     <div>
                         <h3 class="text-white font-bold mb-2">2. Usuarios</h3>
-                        <p>El acceso y/o uso de este portal atribuye la condición de USUARIO, que acepta, desde dicho acceso y/o uso, las Condiciones Generales de Uso aquí reflejadas.</p>
+                        <p>El acceso y/o uso de este portal atribuye la condición de USUARIO, que acepta, desde dicho
+                            acceso y/o uso, las Condiciones Generales de Uso aquí reflejadas.</p>
                     </div>
                     <div>
                         <h3 class="text-white font-bold mb-2">3. Uso del Portal</h3>
-                        <p>Este sitio proporciona el acceso a multitud de informaciones, servicios o datos en Internet pertenecientes a HUMAN AGENTS. El USUARIO asume la responsabilidad del uso del portal. Dicha responsabilidad se extiende al registro que fuese necesario para acceder a determinados servicios o contenidos.</p>
+                        <p>Este sitio proporciona el acceso a multitud de informaciones, servicios o datos en Internet
+                            pertenecientes a HUMAN AGENTS. El USUARIO asume la responsabilidad del uso del portal. Dicha
+                            responsabilidad se extiende al registro que fuese necesario para acceder a determinados
+                            servicios o contenidos.</p>
                     </div>
                     <div>
                         <h3 class="text-white font-bold mb-2">4. Tecnología de IA</h3>
-                        <p>HUMAN AGENTS informa que los servicios prestados utilizan modelos de Inteligencia Artificial para la interacción conversacional. HUMAN AGENTS no se hace responsable de las interpretaciones subjetivas que el usuario pueda derivar de estas interacciones automáticas, aunque se garantiza un entrenamiento basado en estándares de alta calidad profesional.</p>
+                        <p>HUMAN AGENTS informa que los servicios prestados utilizan modelos de Inteligencia Artificial
+                            para la interacción conversacional. HUMAN AGENTS no se hace responsable de las
+                            interpretaciones subjetivas que el usuario pueda derivar de estas interacciones automáticas,
+                            aunque se garantiza un entrenamiento basado en estándares de alta calidad profesional.</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="mt-12 text-center text-slate-500 text-sm">
                 Última actualización: Mayo 2024
             </div>
         </div>
 
         <div id="legal-privacidad" class="legal-section pt-32 pb-20 max-w-4xl mx-auto px-4">
-            <button onclick="showHome()" class="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors mb-12 group">
-                <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            <button onclick="showHome()"
+                class="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors mb-12 group">
+                <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
                 Volver al Inicio
             </button>
-            
+
             <h1 class="text-4xl md:text-5xl font-jakarta font-extrabold mb-12 text-white">Política de Privacidad</h1>
-            
+
             <div class="glass-card p-8 md:p-12 rounded-3xl border border-slate-800">
                 <div class="space-y-6 text-slate-300">
-                    <p>HUMAN AGENTS está comprometida con la protección de la privacidad de sus usuarios. Esta Política de Privacidad describe cómo recopilamos, usamos y protegemos sus datos personales conforme al Reglamento General de Protección de Datos (RGPD).</p>
+                    <p>HUMAN AGENTS está comprometida con la protección de la privacidad de sus usuarios. Esta Política
+                        de Privacidad describe cómo recopilamos, usamos y protegemos sus datos personales conforme al
+                        Reglamento General de Protección de Datos (RGPD).</p>
                     <div>
                         <h3 class="text-white font-bold mb-2">1. Responsable del Tratamiento</h3>
                         <p>Identidad: HUMAN AGENTS S.L. - Correo: privacidad@humanagents.ai</p>
                     </div>
                     <div>
                         <h3 class="text-white font-bold mb-2">2. Finalidad del Tratamiento</h3>
-                        <p>Tratamos la información que nos facilita con el fin de prestarle el servicio solicitado, realizar la gestión administrativa necesaria y, en caso de consentimiento, enviarle comunicaciones comerciales sobre nuestros servicios de IA en ventas.</p>
+                        <p>Tratamos la información que nos facilita con el fin de prestarle el servicio solicitado,
+                            realizar la gestión administrativa necesaria y, en caso de consentimiento, enviarle
+                            comunicaciones comerciales sobre nuestros servicios de IA en ventas.</p>
                     </div>
                     <div>
                         <h3 class="text-white font-bold mb-2">3. Conservación de Datos</h3>
-                        <p>Los datos se conservarán mientras se mantenga la relación comercial o durante los años necesarios para cumplir con las obligaciones legales.</p>
+                        <p>Los datos se conservarán mientras se mantenga la relación comercial o durante los años
+                            necesarios para cumplir con las obligaciones legales.</p>
                     </div>
                     <div>
                         <h3 class="text-white font-bold mb-2">4. Legitimación</h3>
-                        <p>La base legal para el tratamiento de sus datos es el consentimiento del interesado al completar el formulario de contacto o agendar una llamada.</p>
+                        <p>La base legal para el tratamiento de sus datos es el consentimiento del interesado al
+                            completar el formulario de contacto o agendar una llamada.</p>
                     </div>
                     <div>
                         <h3 class="text-white font-bold mb-2">5. Destinatarios</h3>
-                        <p>Los datos no se cederán a terceros salvo en los casos en que exista una obligación legal o sea necesario para la prestación del servicio (por ejemplo, proveedores de infraestructura en la nube o servicios de IA con los que HUMAN AGENTS mantiene acuerdos de confidencialidad).</p>
+                        <p>Los datos no se cederán a terceros salvo en los casos en que exista una obligación legal o
+                            sea necesario para la prestación del servicio (por ejemplo, proveedores de infraestructura
+                            en la nube o servicios de IA con los que HUMAN AGENTS mantiene acuerdos de
+                            confidencialidad).</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="mt-12 text-center text-slate-500 text-sm">
                 Última actualización: Mayo 2024
             </div>
         </div>
 
         <div id="legal-cookies" class="legal-section pt-32 pb-20 max-w-4xl mx-auto px-4">
-            <button onclick="showHome()" class="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors mb-12 group">
-                <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            <button onclick="showHome()"
+                class="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors mb-12 group">
+                <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
                 Volver al Inicio
             </button>
-            
+
             <h1 class="text-4xl md:text-5xl font-jakarta font-extrabold mb-12 text-white">Política de Cookies</h1>
-            
+
             <div class="glass-card p-8 md:p-12 rounded-3xl border border-slate-800">
                 <div class="space-y-6 text-slate-300">
-                    <p>Una cookie es un pequeño fichero de texto que se almacena en su navegador cuando visita casi cualquier página web. Su utilidad es que la web sea capaz de recordar su visita cuando vuelva a navegar por esa página.</p>
+                    <p>Una cookie es un pequeño fichero de texto que se almacena en su navegador cuando visita casi
+                        cualquier página web. Su utilidad es que la web sea capaz de recordar su visita cuando vuelva a
+                        navegar por esa página.</p>
                     <div>
                         <h3 class="text-white font-bold mb-2">1. Cookies utilizadas en este sitio web</h3>
                         <ul class="list-disc pl-5 space-y-2">
-                            <li><strong>Cookies técnicas:</strong> Son las más básicas y permiten, entre otras cosas, saber cuándo está navegando un humano o una aplicación automatizada para la correcta gestión de los formularios de contacto.</li>
-                            <li><strong>Cookies de análisis:</strong> Son aquellas que, tratadas por nosotros o por terceros, nos permiten cuantificar el número de usuarios y así realizar la medición y análisis estadístico de la utilización que hacen los usuarios del servicio ofertado.</li>
+                            <li><strong>Cookies técnicas:</strong> Son las más básicas y permiten, entre otras cosas,
+                                saber cuándo está navegando un humano o una aplicación automatizada para la correcta
+                                gestión de los formularios de contacto.</li>
+                            <li><strong>Cookies de análisis:</strong> Son aquellas que, tratadas por nosotros o por
+                                terceros, nos permiten cuantificar el número de usuarios y así realizar la medición y
+                                análisis estadístico de la utilización que hacen los usuarios del servicio ofertado.
+                            </li>
                         </ul>
                     </div>
                     <div>
                         <h3 class="text-white font-bold mb-2">2. Desactivación o eliminación de cookies</h3>
-                        <p>En cualquier momento podrá ejercer su derecho de desactivación o eliminación de cookies de este sitio web. Estas acciones se realizan de forma diferente en función del navegador que esté usando.</p>
+                        <p>En cualquier momento podrá ejercer su derecho de desactivación o eliminación de cookies de
+                            este sitio web. Estas acciones se realizan de forma diferente en función del navegador que
+                            esté usando.</p>
                     </div>
                     <div>
                         <h3 class="text-white font-bold mb-2">3. Notas adicionales</h3>
-                        <p>Ni esta web ni sus representantes legales se hacen responsables ni del contenido ni de la veracidad de las políticas de privacidad que puedan tener los terceros mencionados en esta política de cookies.</p>
+                        <p>Ni esta web ni sus representantes legales se hacen responsables ni del contenido ni de la
+                            veracidad de las políticas de privacidad que puedan tener los terceros mencionados en esta
+                            política de cookies.</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="mt-12 text-center text-slate-500 text-sm">
                 Última actualización: Mayo 2024
             </div>
@@ -419,15 +611,20 @@
                     <span class="text-xl font-extrabold font-jakarta tracking-tight text-white">HUMAN</span>
                     <span class="text-xl font-medium font-jakarta tracking-tight text-[#38BDF8]">AGENTS</span>
                 </div>
-                
+
                 <div class="flex gap-8 text-sm text-slate-500">
-                    <button onclick="showLegal('aviso')" class="hover:text-white transition-colors cursor-pointer">Aviso Legal</button>
-                    <button onclick="showLegal('privacidad')" class="hover:text-white transition-colors cursor-pointer">Privacidad</button>
-                    <button onclick="showLegal('cookies')" class="hover:text-white transition-colors cursor-pointer">Cookies</button>
+                    <button onclick="showLegal('aviso')" class="hover:text-white transition-colors cursor-pointer">Aviso
+                        Legal</button>
+                    <button onclick="showLegal('privacidad')"
+                        class="hover:text-white transition-colors cursor-pointer">Privacidad</button>
+                    <button onclick="showLegal('cookies')"
+                        class="hover:text-white transition-colors cursor-pointer">Cookies</button>
                 </div>
 
                 <div class="text-slate-500 text-sm">
-                    © <script>document.write(new Date().getFullYear())</script> Human Agents. Transformando las ventas con IA.
+                    ©
+                    <script>document.write(new Date().getFullYear())</script> Human Agents. Transformando las ventas con
+                    IA.
                 </div>
             </div>
         </div>
@@ -460,5 +657,7 @@
             window.scrollTo(0, 0);
         }
     </script>
+    <script src="https://api.funnelup.io/js/form_embed.js"></script>
 </body>
+
 </html>
