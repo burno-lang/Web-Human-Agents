@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,32 +7,203 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #020617; color: #f8fafc; margin: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: #020617; color: #f8fafc; }
         .font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
         .gradient-text {
             background: linear-gradient(135deg, #fff 0%, #38bdf8 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .bg-grid { background-image: radial-gradient(circle at 2px 2px, rgba(56, 189, 248, 0.05) 1px, transparent 0); background-size: 40px 40px; }
     </style>
 <script type="importmap">
 {
   "imports": {
     "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
     "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
     "vite": "https://esm.sh/vite@^7.3.0",
     "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
   }
 }
 </script>
 </head>
-<body>
-    <div id="root"></div>
-    <script type="module" src="index.tsx"></script>
+<body class="bg-grid">
+
+    <!-- Navegación -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-white/5 py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex flex-col leading-none">
+                <span class="text-xl font-extrabold font-jakarta tracking-tighter">HUMAN</span>
+                <span class="text-xl font-medium font-jakarta tracking-tighter text-sky-400">AGENTS</span>
+            </div>
+            <a href="#agenda" class="bg-sky-500 hover:bg-sky-400 text-slate-950 px-6 py-2.5 rounded-full text-sm font-bold transition-all hover:scale-105 active:scale-95">
+                Agendar Evaluación
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 px-6 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-b from-sky-500/10 to-transparent pointer-events-none"></div>
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-bold uppercase tracking-widest mb-8">
+                <i data-lucide="zap" class="w-3 h-3 fill-current"></i> Agentes entrenados por Top Closers
+            </div>
+            <h1 class="text-5xl md:text-7xl font-jakarta font-extrabold mb-8 leading-[1.1] tracking-tight">
+                Vende más y escala con <span class="gradient-text">Human Agents</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Atiende leads en WhatsApp e Instagram 24/7. Agendamos llamadas calificadas, reducimos no-shows y mantenemos tu CRM impecable.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#agenda" class="group flex items-center gap-2 bg-sky-500 hover:bg-sky-400 text-slate-950 px-8 py-4 rounded-xl text-lg font-bold transition-all hover:scale-105 shadow-lg shadow-sky-500/20">
+                    Agendar Evaluación Gratuita
+                    <i data-lucide="chevron-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+
+            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/5 pt-12">
+                <div>
+                    <div class="text-3xl font-bold text-white font-jakarta">+30%</div>
+                    <div class="text-slate-500 text-xs uppercase tracking-widest mt-1">Más Agendas</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-white font-jakarta">-6h</div>
+                    <div class="text-slate-500 text-xs uppercase tracking-widest mt-1">Admin Semanal</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-white font-jakarta">24/7</div>
+                    <div class="text-slate-500 text-xs uppercase tracking-widest mt-1">Respuesta Leads</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-white font-jakarta">-20%</div>
+                    <div class="text-slate-500 text-xs uppercase tracking-widest mt-1">No-Shows</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sellpoints / Garantía -->
+    <section class="py-24 bg-slate-900/40 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-jakarta font-extrabold mb-6 leading-tight">
+                        “Con el mismo gasto en ads, <span class="text-sky-400">te subo las ventas.”</span>
+                    </h2>
+                    <p class="text-slate-400 text-lg mb-8 italic border-l-2 border-sky-500 pl-6">
+                        “Si hoy perdés leads, tenés no-shows o tu CRM es un desastre, esto no es opcional. Es más barato que contratar 1 setter junior y rinde como 3.”
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-sky-400 mt-1"></i>
+                            <p class="text-slate-200 font-medium text-lg">Si no aumentamos conversaciones calificadas, no seguimos.</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-sky-400 mt-1"></i>
+                            <p class="text-slate-200 font-medium text-lg">Reducimos no-shows un 20–30% con seguimiento pre-call.</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-sky-400 mt-1"></i>
+                            <p class="text-slate-200 font-medium text-lg">Tu equipo deja de perder 6 horas cargando reportes en el CRM.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass p-8 md:p-12 rounded-[2.5rem] border-sky-500/20 relative">
+                    <div class="absolute -top-4 -right-4 bg-sky-500 text-slate-950 text-xs font-black px-4 py-2 rounded-lg rotate-3 shadow-xl">ELITE AI</div>
+                    <h3 class="text-2xl font-bold font-jakarta mb-8">Capacidades del Agente:</h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-center gap-4 text-slate-300">
+                            <i data-lucide="message-square" class="text-sky-400"></i> Atiende WhatsApp e Instagram
+                        </li>
+                        <li class="flex items-center gap-4 text-slate-300">
+                            <i data-lucide="calendar" class="text-sky-400"></i> Agenda llamadas calificadas
+                        </li>
+                        <li class="flex items-center gap-4 text-slate-300">
+                            <i data-lucide="database" class="text-sky-400"></i> Mantiene el CRM limpio
+                        </li>
+                        <li class="flex items-center gap-4 text-slate-300">
+                            <i data-lucide="shield-check" class="text-sky-400"></i> Asiste al closer post-llamada
+                        </li>
+                        <li class="flex items-center gap-4 text-slate-300">
+                            <i data-lucide="credit-card" class="text-sky-400"></i> Persigue el pago hasta cobrar
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario CTA -->
+    <section id="agenda" class="py-24 px-6 relative">
+        <div class="max-w-4xl mx-auto glass rounded-[3rem] overflow-hidden border-white/10 shadow-2xl">
+            <div class="grid md:grid-cols-2">
+                <div class="bg-sky-600 p-12 text-white">
+                    <h2 class="text-4xl font-jakarta font-extrabold mb-6 italic">Agenda tu Evaluación.</h2>
+                    <p class="text-sky-100 mb-8 text-lg font-medium">
+                        Sesión técnica de 15 min para diagnosticar tu funnel y calcular cuánto podrías ahorrar eliminando el trabajo manual.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 opacity-80">
+                            <i data-lucide="clock" class="w-4 h-4"></i> Respuesta en menos de 2h
+                        </div>
+                        <div class="flex items-center gap-3 opacity-80">
+                            <i data-lucide="target" class="w-4 h-4"></i> Diagnóstico 100% gratuito
+                        </div>
+                    </div>
+                </div>
+                <div class="p-12 bg-slate-900/50" id="form-container">
+                    <form onsubmit="handleSubmit(event)" class="space-y-6">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Nombre Completo</label>
+                            <input required type="text" class="w-full bg-slate-800 border border-white/10 rounded-xl px-5 py-4 focus:border-sky-500 outline-none transition-all placeholder:text-slate-600" placeholder="Juan Pérez">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">WhatsApp / Email</label>
+                            <input required type="text" class="w-full bg-slate-800 border border-white/10 rounded-xl px-5 py-4 focus:border-sky-500 outline-none transition-all placeholder:text-slate-600" placeholder="+34 600 000 000">
+                        </div>
+                        <button type="submit" class="w-full bg-sky-500 hover:bg-sky-400 text-slate-950 font-extrabold py-5 rounded-xl flex items-center justify-center gap-3 transition-all hover:scale-[1.02] shadow-xl">
+                            SOLICITAR EVALUACIÓN <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5 text-center text-slate-600">
+        <div class="flex flex-col items-center mb-6 leading-none select-none">
+            <span class="text-sm font-extrabold font-jakarta tracking-tighter">HUMAN</span>
+            <span class="text-sm font-medium font-jakarta tracking-tighter text-sky-400">AGENTS</span>
+        </div>
+        <p class="text-xs">© 2024 Human Agents. Inteligencia Artificial aplicada a Cierre de Ventas.</p>
+    </footer>
+
+    <script>
+        // Inicializar Iconos
+        lucide.createIcons();
+
+        // Manejar Envío de Formulario
+        function handleSubmit(e) {
+            e.preventDefault();
+            const container = document.getElementById('form-container');
+            container.innerHTML = `
+                <div class="h-full flex flex-col items-center justify-center text-center py-10 animate-in fade-in zoom-in duration-500">
+                    <div class="w-20 h-20 bg-sky-500/20 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="check-circle" class="w-10 h-10 text-sky-400"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold font-jakarta mb-4">¡Recibido!</h3>
+                    <p class="text-slate-400">Un especialista te contactará por WhatsApp en las próximas horas.</p>
+                </div>
+            `;
+            lucide.createIcons();
+        }
+    </script>
 </body>
 </html>
