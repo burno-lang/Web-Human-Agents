@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 
 interface NavbarProps {
@@ -17,21 +16,20 @@ const Navbar: React.FC<NavbarProps> = ({ onGoHome }) => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-slate-950/80 backdrop-blur-md border-b border-slate-800 py-4' : 'bg-transparent py-6'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-slate-950/90 backdrop-blur-md border-b border-slate-800/50 py-3' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-        <button onClick={onGoHome} className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer">
-          <div className="w-8 h-8 bg-gradient-to-tr from-blue-600 to-teal-400 rounded-lg flex items-center justify-center font-bold text-white">H</div>
-          <span className="text-xl font-bold font-jakarta tracking-tight">HUMAN<span className="text-blue-500">AGENTS</span></span>
+        <button onClick={onGoHome} className="flex flex-col items-start hover:opacity-80 transition-opacity cursor-pointer leading-none">
+          <span className="text-[1.4rem] font-extrabold font-jakarta tracking-tight text-[#003057] dark:text-white">HUMAN</span>
+          <span className="text-[1.4rem] font-medium font-jakarta tracking-tight text-[#38BDF8]">AGENTS</span>
         </button>
         
         <div className="flex items-center gap-4">
           <a 
             href="#agenda" 
             onClick={(e) => {
-              // Ensure we scroll to agenda even if on legal page, by going home first if needed
               onGoHome();
             }}
-            className="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all hover:scale-105 active:scale-95"
+            className="bg-[#38BDF8] hover:bg-sky-400 text-slate-950 px-6 py-2.5 rounded-full text-sm font-bold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-sky-500/20"
           >
             Agendar Evaluación
           </a>

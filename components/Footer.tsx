@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface FooterProps {
@@ -7,12 +6,12 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ onLegalClick }) => {
   return (
-    <footer className="py-12 border-t border-slate-900">
+    <footer className="py-16 border-t border-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-tr from-blue-600 to-teal-400 rounded-lg flex items-center justify-center font-bold text-white">H</div>
-            <span className="text-xl font-bold font-jakarta tracking-tight">HUMAN<span className="text-blue-500">AGENTS</span></span>
+          <div className="flex flex-col items-center md:items-start leading-none">
+            <span className="text-xl font-extrabold font-jakarta tracking-tight text-white">HUMAN</span>
+            <span className="text-xl font-medium font-jakarta tracking-tight text-[#38BDF8]">AGENTS</span>
           </div>
           
           <div className="flex gap-8 text-sm text-slate-500">
