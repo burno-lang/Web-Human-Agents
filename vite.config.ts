@@ -3,16 +3,11 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  // Eliminamos el plugin-react si no lo tienes instalado, 
-  // pero mantenemos la base para que Vite funcione correctamente.
+  plugins: [react()],
   build: {
     outDir: 'dist',
     sourcemap: false,
-    rollupOptions: {
-      input: {
-        main: './index.html'
-      }
-    }
+    emptyOutDir: true
   },
   server: {
     port: 3000
