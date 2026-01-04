@@ -312,7 +312,8 @@
 
                         <div class="grid gap-6 mb-8">
                             <div>
-                                <label class="block text-slate-400 mb-2">¿Cuántos leads generás por semana?</label>
+                                <label class="block text-slate-400 mb-2">¿Cuántos leads generás por semana? (Leads
+                                    totales, no agendas)</label>
                                 <input type="number" id="leads"
                                     class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white focus:outline-none focus:border-blue-500"
                                     placeholder="Ej: 100">
@@ -355,12 +356,27 @@
                 </div>
                 <script>
                     function calculateROI() {
+                        const leads = parseFloat(document.getElementById('leads').value) || 0;
                         const noshows = parseFloat(document.getElementById('noshows').value) || 0;
                         const ticket = parseFloat(document.getElementById('ticket').value) || 0;
-                        const lostMonthly = noshows * ticket * 4;
-                        const recoveredMonthly = lostMonthly * 0.6;
-                        document.getElementById('lost-amount').innerText = '$' + lostMonthly.toLocaleString('es-AR');
-                        document.getElementById('recovered-amount').innerText = '$' + recoveredMonthly.toLocaleString('es-AR');
+
+                        // Cálculo Semanal
+                        // 1. Leads: Asumimos mejora del 10% al 20% en agendas. (10% extra).
+                        // De esas agendas extra, cerramos el 30%. (10% * 30% = 3% de los leads totales).
+                        // User formula approximation: 1/30 * leads
+                        const weeklyGainFromLeads = leads * 0.03 * ticket;
+
+                        // 2. No-shows: Recuperamos 1 venta por cada 3 no-shows.
+                        const weeklyGainFromNoShows = (noshows / 3) * ticket;
+
+                        // Total Mensual (x4)
+                        const totalMonthlyGain = (weeklyGainFromLeads + weeklyGainFromNoShows) * 4;
+
+                        // Formatting
+                        const formattedTotal = '$' + totalMonthlyGain.toLocaleString('es-AR', { maximumFractionDigits: 0 });
+
+                        document.getElementById('lost-amount').innerText = formattedTotal;
+                        document.getElementById('recovered-amount').innerText = formattedTotal;
                         document.getElementById('result').classList.remove('hidden');
                     }
                 </script>
