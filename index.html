@@ -66,6 +66,22 @@
         .home-section.hidden {
             display: none;
         }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fade-in 0.5s ease-out forwards;
+        }
     </style>
 </head>
 
@@ -107,38 +123,46 @@
 
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div class="text-center max-w-4xl mx-auto">
-                        <div
-                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-6">
-                            <span class="flex h-2 w-2 rounded-full bg-sky-500 animate-pulse"></span>
-                            Nueva Generación de Ventas IA
-                        </div>
-
                         <h1 class="text-5xl md:text-7xl font-jakarta font-extrabold tracking-tight mb-8 leading-tight">
-                            Agentes de IA que Venden Como <span class="gradient-text">Humanos</span>, Pero Sin
-                            Descansar.
+                            Recuperá <span class="gradient-text">$26.000/mes</span> en Ventas Perdidas <br>
+                            Sin Contratar Más Gente
                         </h1>
 
-                        <p class="text-lg md:text-xl text-slate-400 mb-10 leading-relaxed max-w-2xl mx-auto">
-                            Entrenados por top closers para agendar llamadas, automatizar tu CRM y cerrar ventas en
-                            WhatsApp e Instagram.
-                            <span class="text-slate-200"> Tu equipo deja de perder 6 horas semanales en tareas
-                                administrativas.</span>
+                        <div
+                            class="text-lg md:text-xl text-slate-400 mb-8 leading-relaxed max-w-2xl mx-auto text-left space-y-4">
+                            <p class="font-semibold text-white">El sistema completo que aumenta tu conversión de lead a
+                                venta:</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-center gap-2"><span class="text-green-400">✓</span> Contacta cada
+                                    lead en menos de 30 segundos (24/7)</li>
+                                <li class="flex items-center gap-2"><span class="text-green-400">✓</span> Reduce
+                                    no-shows entre 40-60% con confirmación automática</li>
+                                <li class="flex items-center gap-2"><span class="text-green-400">✓</span> Libera 6 horas
+                                    semanales de tu equipo para que solo cierre</li>
+                            </ul>
+                        </div>
+
+                        <p
+                            class="text-slate-300 mb-10 max-w-2xl mx-auto border-l-4 border-blue-500 pl-4 py-2 bg-blue-900/10 italic text-left">
+                            <span class="font-bold text-white">Garantía:</span> Si en 45 días no mejorás asistencia y
+                            conversión,
+                            seguimos trabajando gratis hasta que suceda.
                         </p>
 
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <div class="flex flex-col items-center gap-3">
                             <a href="#agenda"
-                                class="group flex items-center justify-center gap-2 bg-[#38BDF8] hover:bg-sky-400 text-slate-950 px-8 py-4 rounded-xl text-lg font-bold transition-all hover:scale-105 shadow-lg shadow-sky-900/20">
-                                Quiero Mi Sesión de Evaluación
+                                class="group flex items-center justify-center gap-2 bg-[#38BDF8] hover:bg-sky-400 text-slate-950 px-8 py-4 rounded-xl text-lg font-bold transition-all hover:scale-105 shadow-lg shadow-sky-900/20 w-full sm:w-auto">
+                                Agendar Auditoría Gratuita de Ventas
                                 <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M9 5l7 7-7 7"></path>
                                 </svg>
                             </a>
-                            <a href="#soluciones"
-                                class="flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all">
-                                Ver Servicios
-                            </a>
+                            <p class="text-slate-400 text-sm">(Descubrimos dónde perdés ventas y cuánto podés recuperar)
+                            </p>
+                            <p class="text-amber-400 font-semibold animate-pulse mt-2">⏱️ Solo quedan 8 cupos esta
+                                semana</p>
                         </div>
 
                         <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-slate-800 pt-12">
@@ -167,217 +191,238 @@
             <section id="soluciones" class="py-24 bg-slate-900/50">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-16">
-                        <h2 class="text-3xl md:text-5xl font-jakarta font-extrabold mb-4">Un equipo de ventas élite,
-                            <br /><span class="text-blue-500">dentro de tu software.</span>
-                        </h2>
-                        <p class="text-slate-400 text-lg max-w-2xl mx-auto">Nuestros agentes no solo responden; ejecutan
-                            todo el proceso comercial de punta a punta.</p>
+                        <h2 class="text-3xl md:text-5xl font-jakarta font-extrabold mb-4">Cómo Funciona: El Sistema
+                            Completo Que <br /><span class="text-blue-500">Multiplica Tu Conversión</span></h2>
+                        <p class="text-slate-400 text-lg max-w-2xl mx-auto">No es un chatbot. No es un CRM. Es el equipo
+                            completo de ventas que actúa desde el primer mensaje hasta el pago confirmado:</p>
                     </div>
 
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- Feature 1 -->
                         <div
-                            class="glass-card p-8 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group">
-                            <div
-                                class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600/20 transition-colors">
-                                <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
-                                    </path>
-                                </svg>
+                            class="glass-card p-6 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group h-full">
+                            <h3 class="text-xl font-bold font-jakarta mb-4 text-blue-400">1. Omnicanalidad Reactiva</h3>
+                            <div class="space-y-3 mb-4 text-sm">
+                                <p class="text-red-400">❌ ANTES: Leads que llegan y nadie responde en 2 horas</p>
+                                <p class="text-green-400">✅ DESPUÉS: Respuesta automática en menos de 30 segundos</p>
                             </div>
-                            <h3 class="text-xl font-bold font-jakarta mb-3">Omnicanalidad Reactiva</h3>
-                            <p class="text-slate-400 leading-relaxed">Atiende todos los leads en WhatsApp e Instagram en
-                                menos de 30 segundos, con el tono y conocimiento de un closer experto.</p>
+                            <div class="p-4 bg-slate-800/50 rounded-xl border border-slate-700">
+                                <p class="font-bold text-white mb-1">Resultado: 3x más conversaciones iniciadas</p>
+                                <p class="text-xs text-slate-400">(El 70% de los leads que no contestaban ahora
+                                    responden)</p>
+                            </div>
                         </div>
+
                         <!-- Feature 2 -->
                         <div
-                            class="glass-card p-8 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group">
-                            <div
-                                class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600/20 transition-colors">
-                                <svg class="w-6 h-6 text-teal-400" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
-                                    </path>
-                                </svg>
+                            class="glass-card p-6 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group h-full">
+                            <h3 class="text-xl font-bold font-jakarta mb-4 text-teal-400">2. Setter de Alta Conversión
+                            </h3>
+                            <div class="space-y-3 mb-4 text-sm">
+                                <p class="text-red-400">❌ ANTES: Tu setter persigue 50 leads al día, se olvida de 15</p>
+                                <p class="text-green-400">✅ DESPUÉS: El sistema sigue cada lead sin olvidar a ninguno
+                                </p>
                             </div>
-                            <h3 class="text-xl font-bold font-jakarta mb-3">Setter de Alta Conversión</h3>
-                            <p class="text-slate-400 leading-relaxed">Califica prospectos y agenda llamadas directamente
-                                en tu calendario. Identifica al cliente ideal y descarta curiosos.</p>
+                            <div class="p-4 bg-slate-800/50 rounded-xl border border-slate-700">
+                                <p class="font-bold text-white mb-1">Resultado: +40% más agendas sin contratar</p>
+                                <p class="text-xs text-slate-400">(De 20 agendas/semana a 28 solo por seguimiento
+                                    completo)</p>
+                            </div>
                         </div>
+
                         <!-- Feature 3 -->
                         <div
-                            class="glass-card p-8 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group">
-                            <div
-                                class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600/20 transition-colors">
-                                <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
-                                    </path>
-                                </svg>
+                            class="glass-card p-6 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group h-full">
+                            <h3 class="text-xl font-bold font-jakarta mb-4 text-indigo-400">3. Reducción de No-Shows
+                            </h3>
+                            <div class="space-y-3 mb-4 text-sm">
+                                <p class="text-red-400">❌ ANTES: 10 no-shows/semana = $26.000 perdidos/mes</p>
+                                <p class="text-green-400">✅ DESPUÉS: 4 no-shows/semana con confirmación inteligente</p>
                             </div>
-                            <h3 class="text-xl font-bold font-jakarta mb-3">Reducción de No-Shows</h3>
-                            <p class="text-slate-400 leading-relaxed">Seguimiento inteligente pre-call que reduce el
-                                absentismo entre un 20% y 30% mediante recordatorios estratégicos.</p>
+                            <div class="p-4 bg-slate-800/50 rounded-xl border border-slate-700">
+                                <p class="font-bold text-white mb-1">Resultado: Recuperás mínimo $10.000/mes</p>
+                                <p class="text-xs text-slate-400">(Cada 3 no-shows evitados = 1 venta de $2.000 extra)
+                                </p>
+                            </div>
                         </div>
+
                         <!-- Feature 4 -->
                         <div
-                            class="glass-card p-8 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group">
-                            <div
-                                class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600/20 transition-colors">
-                                <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4">
-                                    </path>
-                                </svg>
+                            class="glass-card p-6 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group h-full">
+                            <h3 class="text-xl font-bold font-jakarta mb-4 text-blue-500">4. CRM Autogestionado</h3>
+                            <div class="space-y-3 mb-4 text-sm">
+                                <p class="text-red-400">❌ ANTES: 6 horas/semana cargando datos manualmente</p>
+                                <p class="text-green-400">✅ DESPUÉS: CRM actualizado en tiempo real automáticamente</p>
                             </div>
-                            <h3 class="text-xl font-bold font-jakarta mb-3">CRM Autogestionado</h3>
-                            <p class="text-slate-400 leading-relaxed">Mantiene el CRM limpio sin esfuerzo humano.
-                                Rellena campos, crea negocios y genera reportes diarios automáticamente.</p>
+                            <div class="p-4 bg-slate-800/50 rounded-xl border border-slate-700">
+                                <p class="font-bold text-white mb-1">Resultado: Tu equipo usa esas 6 horas para cerrar
+                                </p>
+                                <p class="text-xs text-slate-400">(1 closer cierra $15.000/semana → 6 horas = $5.000
+                                    extras)</p>
+                            </div>
                         </div>
+
                         <!-- Feature 5 -->
                         <div
-                            class="glass-card p-8 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group">
-                            <div
-                                class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600/20 transition-colors">
-                                <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
-                                    </path>
-                                </svg>
+                            class="glass-card p-6 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group h-full">
+                            <h3 class="text-xl font-bold font-jakarta mb-4 text-emerald-400">5. Asistente Post-Llamada
+                            </h3>
+                            <div class="space-y-3 mb-4 text-sm">
+                                <p class="text-red-400">❌ ANTES: Llamada termina, nadie hace seguimiento</p>
+                                <p class="text-green-400">✅ DESPUÉS: IA detecta objeciones y entrena al closer para la
+                                    próxima</p>
                             </div>
-                            <h3 class="text-xl font-bold font-jakarta mb-3">Asistente Post-Llamada</h3>
-                            <p class="text-slate-400 leading-relaxed">Analiza la reunión, ofrece feedback de mejora al
-                                equipo y gestiona objeciones post-llamada para empujar el cierre.</p>
+                            <div class="p-4 bg-slate-800/50 rounded-xl border border-slate-700">
+                                <p class="font-bold text-white mb-1">Resultado: Conversión de 30% a 38% en 45 días</p>
+                                <p class="text-xs text-slate-400">(De 30 ventas/mes a 38 = $16.000 extras sin más
+                                    tráfico)</p>
+                            </div>
                         </div>
+
                         <!-- Feature 6 -->
                         <div
-                            class="glass-card p-8 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group">
-                            <div
-                                class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600/20 transition-colors">
-                                <svg class="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z">
-                                    </path>
-                                </svg>
+                            class="glass-card p-6 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group h-full">
+                            <h3 class="text-xl font-bold font-jakarta mb-4 text-sky-400">6. Cierre y Cobro</h3>
+                            <div class="space-y-3 mb-4 text-sm">
+                                <p class="text-red-400">❌ ANTES: Cliente dice "te pago mañana", nunca paga</p>
+                                <p class="text-green-400">✅ DESPUÉS: Sistema persigue hasta cobrar o confirmar abandono
+                                </p>
                             </div>
-                            <h3 class="text-xl font-bold font-jakarta mb-3">Cierre y Cobro</h3>
-                            <p class="text-slate-400 leading-relaxed">Persigue el pago hasta cobrar. Reconoce capturas
-                                de pantalla, transferencias y confirma la entrada de capital.</p>
+                            <div class="p-4 bg-slate-800/50 rounded-xl border border-slate-700">
+                                <p class="font-bold text-white mb-1">Resultado: 95% de pagos confirmados en menos de
+                                    48hs</p>
+                                <p class="text-xs text-slate-400">(Antes: 70% pagaba. Ahora: 95%. Recuperás $8.000/mes
+                                    extra)</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Comparison Section -->
-            <section id="beneficios" class="py-24 overflow-hidden">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="grid lg:grid-cols-2 gap-16 items-center">
-                        <div>
-                            <h2 class="text-3xl md:text-5xl font-jakarta font-extrabold mb-8 leading-tight">
-                                Más barato que 1 Setter Junior. <br />
-                                Rinde como <span class="text-teal-400">3 Seniors.</span>
-                            </h2>
-                            <p class="text-slate-400 text-lg mb-8">
-                                "Si hoy perdés leads, tenés no-shows o tu CRM es un desastre, esto no es opcional. Con
-                                el mismo gasto en ads, te subimos agendas, asistencia y cierres sin contratar más
-                                personal."
-                            </p>
+            <!-- ROI Calculator Section -->
+            <section id="calculadora" class="py-24 bg-slate-950">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-5xl font-jakarta font-extrabold mb-4">¿Cuánto Estás Perdiendo Hoy?
+                        </h2>
+                    </div>
 
-                            <ul class="space-y-4">
-                                <li class="flex items-center gap-3 text-slate-200">
-                                    <div
-                                        class="flex-shrink-0 w-6 h-6 bg-teal-500/10 rounded-full flex items-center justify-center">
-                                        <svg class="w-4 h-4 text-teal-400" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7"></path>
-                                        </svg>
-                                    </div>
-                                    Garantía: Si no aumentamos conversaciones calificadas, no seguimos.
-                                </li>
-                                <li class="flex items-center gap-3 text-slate-200">
-                                    <div
-                                        class="flex-shrink-0 w-6 h-6 bg-teal-500/10 rounded-full flex items-center justify-center">
-                                        <svg class="w-4 h-4 text-teal-400" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7"></path>
-                                        </svg>
-                                    </div>
-                                    Reducción del 30% en no-shows pre-call.
-                                </li>
-                                <li class="flex items-center gap-3 text-slate-200">
-                                    <div
-                                        class="flex-shrink-0 w-6 h-6 bg-teal-500/10 rounded-full flex items-center justify-center">
-                                        <svg class="w-4 h-4 text-teal-400" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7"></path>
-                                        </svg>
-                                    </div>
-                                    Liberamos 6 horas/semana por vendedor.
-                                </li>
-                                <li class="flex items-center gap-3 text-slate-200">
-                                    <div
-                                        class="flex-shrink-0 w-6 h-6 bg-teal-500/10 rounded-full flex items-center justify-center">
-                                        <svg class="w-4 h-4 text-teal-400" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M5 13l4 4L19 7"></path>
-                                        </svg>
-                                    </div>
-                                    Entrenamiento basado en top closers del mercado.
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="glass-card p-8 rounded-2xl border border-slate-800">
+                        <h3 class="text-xl font-bold font-jakarta text-center mb-6">Calculadora de Ventas Perdidas</h3>
 
-                        <div class="relative">
-                            <div
-                                class="absolute -inset-4 bg-gradient-to-tr from-blue-600/20 to-teal-400/20 blur-2xl rounded-3xl">
+                        <div class="grid gap-6 mb-8">
+                            <div>
+                                <label class="block text-slate-400 mb-2">¿Cuántos leads generás por semana?</label>
+                                <input type="number" id="leads"
+                                    class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white focus:outline-none focus:border-blue-500"
+                                    placeholder="Ej: 100">
                             </div>
-                            <div
-                                class="relative glass-card rounded-3xl overflow-hidden border border-slate-700 shadow-2xl">
-                                <div
-                                    class="p-6 bg-slate-800/50 border-b border-slate-700 font-bold font-jakarta flex justify-between">
-                                    <span>Eficiencia Operativa</span>
-                                    <span class="text-blue-400">Human Agents AI</span>
-                                </div>
-                                <div class="p-8 space-y-6">
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-slate-400">Tiempo de respuesta</span>
-                                        <span class="font-semibold">&lt; 30 Segundos</span>
-                                    </div>
-                                    <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
-                                        <div class="h-full bg-blue-500 w-[98%]"></div>
-                                    </div>
-
-                                    <div class="flex justify-between items-center pt-4">
-                                        <span class="text-slate-400">Consistencia en seguimiento</span>
-                                        <span class="font-semibold">Impecable 24/7</span>
-                                    </div>
-                                    <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
-                                        <div class="h-full bg-teal-400 w-[100%]"></div>
-                                    </div>
-
-                                    <div class="flex justify-between items-center pt-4">
-                                        <span class="text-slate-400">Costo vs Escalabilidad</span>
-                                        <span class="font-semibold">Lineal vs Exponencial</span>
-                                    </div>
-                                    <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
-                                        <div class="h-full bg-indigo-500 w-[95%]"></div>
-                                    </div>
-                                </div>
-                                <div class="p-6 bg-blue-600 text-center font-bold">
-                                    Ahorro Estimado: +$15,000 / mes en Ops
+                            <div>
+                                <label class="block text-slate-400 mb-2">¿Cuántos no-shows tenés por semana?</label>
+                                <input type="number" id="noshows"
+                                    class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white focus:outline-none focus:border-blue-500"
+                                    placeholder="Ej: 10">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 mb-2">¿Cuál es tu ticket promedio?</label>
+                                <div class="relative">
+                                    <span class="absolute left-3 top-3 text-slate-500">$</span>
+                                    <input type="number" id="ticket"
+                                        class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 pl-8 text-white focus:outline-none focus:border-blue-500"
+                                        placeholder="Ej: 2000">
                                 </div>
                             </div>
                         </div>
+
+                        <button onclick="calculateROI()"
+                            class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl transition-all hover:scale-[1.02] shadow-lg shadow-blue-900/20 mb-8">
+                            CALCULAR
+                        </button>
+
+                        <div id="result"
+                            class="hidden bg-slate-800/50 p-6 rounded-xl border border-slate-700 text-center animate-fade-in">
+                            <p class="text-slate-400 mb-2">Estás perdiendo aproximadamente:</p>
+                            <div class="text-4xl font-extrabold text-red-400 mb-4" id="lost-amount">$0</div>
+                            <p class="text-slate-300 mb-6">Con Human Agents podrías recuperar mínimo <span
+                                    class="text-green-400 font-bold" id="recovered-amount">$0</span>.</p>
+
+                            <a href="#agenda"
+                                class="inline-block bg-[#38BDF8] hover:bg-sky-400 text-slate-950 px-8 py-3 rounded-full text-sm font-bold transition-all hover:scale-105 shadow-lg shadow-sky-500/20">
+                                Agendar Auditoría Para Recuperar Esa Plata
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    function calculateROI() {
+                        const noshows = parseFloat(document.getElementById('noshows').value) || 0;
+                        const ticket = parseFloat(document.getElementById('ticket').value) || 0;
+                        const lostMonthly = noshows * ticket * 4;
+                        const recoveredMonthly = lostMonthly * 0.6;
+                        document.getElementById('lost-amount').innerText = '$' + lostMonthly.toLocaleString('es-AR');
+                        document.getElementById('recovered-amount').innerText = '$' + recoveredMonthly.toLocaleString('es-AR');
+                        document.getElementById('result').classList.remove('hidden');
+                    }
+                </script>
+            </section>
+
+            <!-- Comparison Table Section -->
+            <section class="py-24 bg-slate-900/30">
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-5xl font-jakarta font-extrabold mb-4">Tu Proceso Hoy vs Con Human
+                            Agents</h2>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="border-b border-slate-800">
+                                    <th class="py-4 text-left text-slate-500 w-1/3"></th>
+                                    <th class="py-4 text-center text-slate-400 text-xl font-bold w-1/3">Tu Proceso Hoy
+                                    </th>
+                                    <th
+                                        class="py-4 text-center text-blue-400 text-xl font-bold w-1/3 bg-blue-900/10 rounded-t-xl">
+                                        Con Human Agents</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-lg">
+                                <tr class="border-b border-slate-800/50">
+                                    <td class="py-6 text-slate-300 font-semibold">Tiempo de respuesta</td>
+                                    <td class="py-6 text-center text-slate-400">2-4 horas</td>
+                                    <td class="py-6 text-center text-white bg-blue-900/5 font-bold"><span
+                                            class="text-green-400">
+                                            < 30 segundos</span>
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-slate-800/50">
+                                    <td class="py-6 text-slate-300 font-semibold">Seguimiento</td>
+                                    <td class="py-6 text-center text-slate-400">Inconsistente</td>
+                                    <td class="py-6 text-center text-white bg-blue-900/5 font-bold">100% automático</td>
+                                </tr>
+                                <tr class="border-b border-slate-800/50">
+                                    <td class="py-6 text-slate-300 font-semibold">Tasa de contacto</td>
+                                    <td class="py-6 text-center text-slate-400">20-40%</td>
+                                    <td class="py-6 text-center text-white bg-blue-900/5 font-bold">60-80%</td>
+                                </tr>
+                                <tr class="border-b border-slate-800/50">
+                                    <td class="py-6 text-slate-300 font-semibold">No-shows</td>
+                                    <td class="py-6 text-center text-slate-400">30-40%</td>
+                                    <td class="py-6 text-center text-white bg-blue-900/5 font-bold">10-20%</td>
+                                </tr>
+                                <tr class="border-b border-slate-800/50">
+                                    <td class="py-6 text-slate-300 font-semibold">Carga de CRM</td>
+                                    <td class="py-6 text-center text-slate-400">6 hrs/semana</td>
+                                    <td class="py-6 text-center text-white bg-blue-900/5 font-bold">0 horas</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-6 text-slate-300 font-semibold">Costo mensual</td>
+                                    <td class="py-6 text-center text-slate-400">$2.000-$4.000<br /><span
+                                            class="text-sm">(1-2 setters)</span></td>
+                                    <td class="py-6 text-center text-white bg-blue-900/5 font-bold text-2xl">$XXX</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </section>
@@ -436,14 +481,69 @@
                 </div>
             </section>
 
+            <!-- FAQ Section -->
+            <section class="py-24 bg-slate-950">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl md:text-5xl font-jakarta font-extrabold mb-4">Preguntas Frecuentes</h2>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                            <h3 class="font-bold text-xl mb-3">¿Funciona con mi CRM? (HubSpot, Pipedrive, etc.)</h3>
+                            <p class="text-slate-400">Sí. Nos integramos con los 15 CRMs más usados en infoproductos. Si
+                                usás uno diferente, lo conectamos igual en menos de 48hs.</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                            <h3 class="font-bold text-xl mb-3">¿Qué pasa si mis leads no responden a la IA?</h3>
+                            <p class="text-slate-400">La IA contacta por WhatsApp, llamada y email de forma secuencial.
+                                Si después de 3 intentos inteligentes no responde, lo marca como "frío" y tu equipo
+                                decide si vale la pena insistir manualmente.</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                            <h3 class="font-bold text-xl mb-3">¿Cuánto tiempo tarda la implementación?</h3>
+                            <p class="text-slate-400">10 días hábiles desde la auditoría hasta que el sistema está
+                                vendiendo.<br />
+                                Día 1-3: Auditoría y entrenamiento<br />
+                                Día 4-7: Integración técnica<br />
+                                Día 8-10: Pruebas y lanzamiento</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                            <h3 class="font-bold text-xl mb-3">¿Qué pasa si no funciona?</h3>
+                            <p class="text-slate-400">Garantía de 45 días: Si no mejoramos tu tasa de contacto,
+                                asistencia a llamadas y conversión, seguimos trabajando
+                                gratis hasta que suceda. Sin letra chica.</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                            <h3 class="font-bold text-xl mb-3">¿Cuánto cuesta?</h3>
+                            <p class="text-slate-400">El sistema es a medida para cada caso, desde $300/mes (precio
+                                competitivo con 1 setter junior,
+                                pero con resultados de 3 seniors). Agenda tu auditoría para ver el pricing exacto según
+                                tu volumen de leads.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Agenda Section with FunnelUp Form -->
             <section id="agenda" class="py-24 bg-slate-900/50">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-12">
                         <h2 class="text-3xl md:text-5xl font-jakarta font-extrabold mb-4">Agenda Tu <span
-                                class="text-[#38BDF8]">Sesión de Evaluación</span></h2>
-                        <p class="text-slate-400 text-lg max-w-2xl mx-auto">Descubre cómo nuestros agentes de IA pueden
-                            transformar tus ventas en solo 10 días.</p>
+                                class="text-[#38BDF8]">Auditoría Gratuita de Ventas</span></h2>
+                        <div class="text-slate-400 text-lg max-w-2xl mx-auto mb-8">
+                            <p class="mb-4">En 30 minutos descubrimos:</p>
+                            <ul class="text-left max-w-md mx-auto space-y-2 mb-6">
+                                <li class="flex items-center gap-2"><span class="text-green-400">✓</span> Dónde estás
+                                    perdiendo ventas hoy</li>
+                                <li class="flex items-center gap-2"><span class="text-green-400">✓</span> Cuánto podrías
+                                    recuperar el primer mes</li>
+                                <li class="flex items-center gap-2"><span class="text-green-400">✓</span> Si el sistema
+                                    aplica para tu caso (o no)</li>
+                            </ul>
+                            <p class="font-semibold text-slate-300">Sin compromiso. Sin presión. Solo números reales.
+                            </p>
+                        </div>
                     </div>
 
                     <div class="glass-card rounded-3xl border border-slate-700 overflow-hidden"
@@ -452,6 +552,20 @@
                             style="width: 100%;border:none;overflow: hidden;" scrolling="no"
                             id="Ub00M44osFAlRBK5dvnZ_1767465168642"></iframe><br>
                         <script src="https://api.funnelup.io/js/form_embed.js" type="text/javascript"></script>
+                    </div>
+
+                    <div class="text-center mt-8">
+                        <p class="text-amber-400 font-semibold animate-pulse mb-4">⏱️ Solo 5 cupos disponibles esta
+                            semana</p>
+                        <div
+                            class="bg-blue-900/10 border border-blue-500/20 p-6 rounded-xl max-w-2xl mx-auto text-left">
+                            <p class="text-slate-300 text-sm italic">
+                                <span class="font-bold text-white not-italic">P.D.:</span> Si ya perdiste más de $10.000
+                                en ventas este mes por no-shows o seguimientos mal hechos, esta auditoría te va a
+                                doler... porque vas a ver exactamente cuánto dejaste ir.<br /><br />
+                                Pero al menos vas a saber cómo recuperarlo el mes que viene.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
