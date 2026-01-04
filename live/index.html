@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Agents | IA de Ventas de Alto Rendimiento</title>
+    <meta name="description"
+        content="Agentes de IA entrenados por top closers para agendar llamadas, automatizar tu CRM y cerrar ventas en WhatsApp e Instagram 24/7.">
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TL28HBZD');</script>
+    <!-- End Google Tag Manager -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .font-jakarta {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #38BDF8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .glow {
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+        }
+
+        /* Hide sections initially for navigation */
+        .legal-section {
+            display: none;
+        }
+
+        .legal-section.active {
+            display: block;
+        }
+
+        .home-section.hidden {
+            display: none;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fade-in 0.5s ease-out forwards;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-slate-100 overflow-x-hidden">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TL28HBZD" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <a href="#" onclick="showHome(); return false;"
+                class="flex flex-col items-start hover:opacity-80 transition-opacity cursor-pointer leading-none">
+                <span class="text-[1.4rem] font-extrabold font-jakarta tracking-tight text-white">HUMAN</span>
+                <span class="text-[1.4rem] font-medium font-jakarta tracking-tight text-[#38BDF8]">AGENTS</span>
+            </a>
+
+            <div class="flex items-center gap-4">
+                <a href="#agenda"
+                    class="bg-[#38BDF8] hover:bg-sky-400 text-slate-950 px-6 py-2.5 rounded-full text-sm font-bold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-sky-500/20">
+                    Agendar Sesión de Evaluación
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Home sections -->
+        <div id="home-content">
+            <!-- Hero Section -->
+            <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+                <!-- Background Orbs -->
+                <div
+                    class="absolute top-0 -left-20 w-72 h-72 bg-blue-600/10 rounded-full blur-[100px] pointer-events-none">
+                </div>
+                <div
+                    class="absolute top-1/2 -right-20 w-96 h-96 bg-sky-500/10 rounded-full blur-[120px] pointer-events-none">
+                </div>
+
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="text-center max-w-4xl mx-auto">
+                        <h1 class="text-5xl md:text-7xl font-jakarta font-extrabold tracking-tight mb-8 leading-tight">
+                            Recuperá <span class="gradient-text">$26.000/mes</span> en Ventas Perdidas <br>
+                            Sin Contratar Más Gente
+                        </h1>
+
+                        <div
+                            class="text-lg md:text-xl text-slate-400 mb-8 leading-relaxed max-w-2xl mx-auto text-left space-y-4">
+                            <p class="font-semibold text-white">El sistema completo que aumenta tu conversión de lead a
+                                venta:</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-center gap-2"><span class="text-green-400">✓</span> Contacta cada
+                                    lead en menos de 30 segundos (24/7)</li>
+                                <li class="flex items-center gap-2"><span class="text-green-400">✓</span> Reduce
+                                    no-shows entre 40-60% con confirmación automática</li>
+                                <li class="flex items-center gap-2"><span class="text-green-400">✓</span> Libera 6 horas
+                                    semanales de tu equipo para que solo cierre</li>
+                            </ul>
+                        </div>
+
+                        <p
+                            class="text-slate-300 mb-10 max-w-2xl mx-auto border-l-4 border-blue-500 pl-4 py-2 bg-blue-900/10 italic text-left">
+                            <span class="font-bold text-white">Garantía:</span> Si en 45 días no mejorás asistencia y
+                            conversión,
+                            seguimos trabajando gratis hasta que suceda.
+                        </p>
+
+                        <div class="flex flex-col items-center gap-3">
+                            <a href="#agenda"
+                                class="group flex items-center justify-center gap-2 bg-[#38BDF8] hover:bg-sky-400 text-slate-950 px-8 py-4 rounded-xl text-lg font-bold transition-all hover:scale-105 shadow-lg shadow-sky-900/20 w-full sm:w-auto">
+                                Agendar Auditoría Gratuita de Ventas
+                                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                            <p class="text-slate-400 text-sm">(Descubrimos dónde perdés ventas y cuánto podés recuperar)
+                            </p>
+                            <p class="text-amber-400 font-semibold animate-pulse mt-2">⏱️ Solo quedan 8 cupos esta
+                                semana</p>
+                        </div>
+
+                        <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-slate-800 pt-12">
+                            <div>
+                                <div class="text-3xl font-bold font-jakarta text-white">+30%</div>
+                                <div class="text-slate-500 text-sm mt-1">Asistencia a llamadas</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold font-jakarta text-white">24/7</div>
+                                <div class="text-slate-500 text-sm mt-1">Atención Inmediata</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold font-jakarta text-white">0s</div>
+                                <div class="text-slate-500 text-sm mt-1">Carga de CRM</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold font-jakarta text-white">100%</div>
+                                <div class="text-slate-500 text-sm mt-1">Follow-up Automático</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section id="soluciones" class="py-24 bg-slate-900/50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl md:text-5xl font-jakarta font-extrabold mb-4">Cómo Funciona: El Sistema
+                            Completo Que <br /><span class="text-blue-500">Multiplica Tu Conversión</span></h2>
+                        <p class="text-slate-400 text-lg max-w-2xl mx-auto">No es un chatbot. No es un CRM. Es el equipo
+                            completo de ventas que actúa desde el primer mensaje hasta el pago confirmado:</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Feature 1 -->
+                        <div
+                            class="glass-card p-6 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group h-full">
+                            <h3 class="text-xl font-bold font-jakarta mb-4 text-blue-400">1. Omnicanalidad Reactiva</h3>
+                            <div class="space-y-3 mb-4 text-sm">
+                                <p class="text-red-400">❌ ANTES: Leads que llegan y nadie responde en 2 horas</p>
+                                <p class="text-green-400">✅ DESPUÉS: Respuesta automática en menos de 30 segundos</p>
+                            </div>
+                            <div class="p-4 bg-slate-800/50 rounded-xl border border-slate-700">
+                                <p class="font-bold text-white mb-1">Resultado: 3x más conversaciones iniciadas</p>
+                                <p class="text-xs text-slate-400">(El 70% de los leads que no contestaban ahora
+                                    responden)</p>
+                            </div>
+                        </div>
+
+                        <!-- Feature 2 -->
+                        <div
+                            class="glass-card p-6 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group h-full">
+                            <h3 class="text-xl font-bold font-jakarta mb-4 text-teal-400">2. Setter de Alta Conversión
+                            </h3>
+                            <div class="space-y-3 mb-4 text-sm">
+                                <p class="text-red-400">❌ ANTES: Tu setter persigue 50 leads al día, se olvida de 15</p>
+                                <p class="text-green-400">✅ DESPUÉS: El sistema sigue cada lead sin olvidar a ninguno
+                                </p>
+                            </div>
+                            <div class="p-4 bg-slate-800/50 rounded-xl border border-slate-700">
+                                <p class="font-bold text-white mb-1">Resultado: +40% más agendas sin contratar</p>
+                                <p class="text-xs text-slate-400">(De 20 agendas/semana a 28 solo por seguimiento
+                                    completo)</p>
+                            </div>
+                        </div>
+
+                        <!-- Feature 3 -->
+                        <div
+                            class="glass-card p-6 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group h-full">
+                            <h3 class="text-xl font-bold font-jakarta mb-4 text-indigo-400">3. Reducción de No-Shows
+                            </h3>
+                            <div class="space-y-3 mb-4 text-sm">
+                                <p class="text-red-400">❌ ANTES: 10 no-shows/semana = $26.000 perdidos/mes</p>
+                                <p class="text-green-400">✅ DESPUÉS: 4 no-shows/semana con confirmación inteligente</p>
+                            </div>
+                            <div class="p-4 bg-slate-800/50 rounded-xl border border-slate-700">
+                                <p class="font-bold text-white mb-1">Resultado: Recuperás mínimo $10.000/mes</p>
+                                <p class="text-xs text-slate-400">(Cada 3 no-shows evitados = 1 venta de $2.000 extra)
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Feature 4 -->
+                        <div
+                            class="glass-card p-6 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group h-full">
+                            <h3 class="text-xl font-bold font-jakarta mb-4 text-blue-500">4. CRM Autogestionado</h3>
+                            <div class="space-y-3 mb-4 text-sm">
+                                <p class="text-red-400">❌ ANTES: 6 horas/semana cargando datos manualmente</p>
+                                <p class="text-green-400">✅ DESPUÉS: CRM actualizado en tiempo real automáticamente</p>
+                            </div>
+                            <div class="p-4 bg-slate-800/50 rounded-xl border border-slate-700">
+                                <p class="font-bold text-white mb-1">Resultado: Tu equipo usa esas 6 horas para cerrar
+                                </p>
+                                <p class="text-xs text-slate-400">(1 closer cierra $15.000/semana → 6 horas = $5.000
+                                    extras)</p>
+                            </div>
+                        </div>
+
+                        <!-- Feature 5 -->
+                        <div
+                            class="glass-card p-6 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group h-full">
+                            <h3 class="text-xl font-bold font-jakarta mb-4 text-emerald-400">5. Asistente Post-Llamada
+                            </h3>
+                            <div class="space-y-3 mb-4 text-sm">
+                                <p class="text-red-400">❌ ANTES: Llamada termina, nadie hace seguimiento</p>
+                                <p class="text-green-400">✅ DESPUÉS: IA detecta objeciones y entrena al closer para la
+                                    próxima</p>
+                            </div>
+                            <div class="p-4 bg-slate-800/50 rounded-xl border border-slate-700">
+                                <p class="font-bold text-white mb-1">Resultado: Conversión de 30% a 38% en 45 días</p>
+                                <p class="text-xs text-slate-400">(De 30 ventas/mes a 38 = $16.000 extras sin más
+                                    tráfico)</p>
+                            </div>
+                        </div>
+
+                        <!-- Feature 6 -->
+                        <div
+                            class="glass-card p-6 rounded-2xl hover:bg-slate-800/50 transition-all border border-slate-800 group h-full">
+                            <h3 class="text-xl font-bold font-jakarta mb-4 text-sky-400">6. Cierre y Cobro</h3>
+                            <div class="space-y-3 mb-4 text-sm">
+                                <p class="text-red-400">❌ ANTES: Cliente dice "te pago mañana", nunca paga</p>
+                                <p class="text-green-400">✅ DESPUÉS: Sistema persigue hasta cobrar o confirmar abandono
+                                </p>
+                            </div>
+                            <div class="p-4 bg-slate-800/50 rounded-xl border border-slate-700">
+                                <p class="font-bold text-white mb-1">Resultado: 95% de pagos confirmados en menos de
+                                    48hs</p>
+                                <p class="text-xs text-slate-400">(Antes: 70% pagaba. Ahora: 95%. Recuperás $8.000/mes
+                                    extra)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Use Cases Section -->
+            <section class="py-24 bg-slate-950 border-b border-slate-900">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <div
+                            class="inline-block px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-semibold mb-6">
+                            Resultados Comprobados
+                        </div>
+                        <h2 class="text-3xl md:text-5xl font-jakarta font-extrabold mb-4">Casos Reales <span
+                                class="text-slate-500 text-2xl block mt-2 md:inline md:mt-0 font-normal">(Clientes
+                                Anónimos Por NDA)</span></h2>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Case 1 -->
+                        <div
+                            class="glass-card p-8 rounded-2xl border border-slate-800 hover:border-blue-500/30 transition-all group">
+                            <div
+                                class="h-12 w-12 bg-blue-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-500/20 transition-colors">
+                                <span class="text-2xl">🎓</span>
+                            </div>
+                            <h3 class="text-xl font-bold font-jakarta text-white mb-4">Infoproductor de Mentorías
+                                ($80K/mes)</h3>
+                            <div class="space-y-4 text-sm">
+                                <div>
+                                    <p class="text-slate-500 font-semibold mb-1">Problema:</p>
+                                    <p class="text-slate-300">15 no-shows semanales = <span class="text-red-400">$30K
+                                            perdidos/mes</span></p>
+                                </div>
+                                <div>
+                                    <p class="text-slate-500 font-semibold mb-1">Solución:</p>
+                                    <p class="text-slate-300">Confirmación automática pre-llamada</p>
+                                </div>
+                                <div class="pt-4 border-t border-slate-800">
+                                    <p class="text-blue-400 font-bold mb-1">Resultado:</p>
+                                    <p class="text-white font-semibold">5 no-shows semanales → <span
+                                            class="text-green-400">recuperó $20K el primer mes</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Case 2 -->
+                        <div
+                            class="glass-card p-8 rounded-2xl border border-slate-800 hover:border-blue-500/30 transition-all group">
+                            <div
+                                class="h-12 w-12 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition-colors">
+                                <span class="text-2xl">🏢</span>
+                            </div>
+                            <h3 class="text-xl font-bold font-jakarta text-white mb-4">Academia Online con Equipo de 3
+                                Closers</h3>
+                            <div class="space-y-4 text-sm">
+                                <div>
+                                    <p class="text-slate-500 font-semibold mb-1">Problema:</p>
+                                    <p class="text-slate-300">Leads fríos sin seguimiento, CRM desactualizado</p>
+                                </div>
+                                <div>
+                                    <p class="text-slate-500 font-semibold mb-1">Solución:</p>
+                                    <p class="text-slate-300">Sistema completo de contacto + seguimiento</p>
+                                </div>
+                                <div class="pt-4 border-t border-slate-800">
+                                    <p class="text-purple-400 font-bold mb-1">Resultado:</p>
+                                    <p class="text-white font-semibold flex flex-col gap-1">
+                                        <span><span class="text-green-400">+40% más agendas</span> sin contratar</span>
+                                        <span class="text-xs text-slate-400">6 hrs/semana ahorradas por closer</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Case 3 -->
+                        <div
+                            class="glass-card p-8 rounded-2xl border border-slate-800 hover:border-blue-500/30 transition-all group">
+                            <div
+                                class="h-12 w-12 bg-emerald-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 transition-colors">
+                                <span class="text-2xl">💰</span>
+                            </div>
+                            <h3 class="text-xl font-bold font-jakarta text-white mb-4">Curso de Alto Ticket ($3K
+                                promedio)</h3>
+                            <div class="space-y-4 text-sm">
+                                <div>
+                                    <p class="text-slate-500 font-semibold mb-1">Problema:</p>
+                                    <p class="text-slate-300">30% de conversión, follow-up manual inconsistente</p>
+                                </div>
+                                <div>
+                                    <p class="text-slate-500 font-semibold mb-1">Solución:</p>
+                                    <p class="text-slate-300">Asistente post-llamada con IA coach</p>
+                                </div>
+                                <div class="pt-4 border-t border-slate-800">
+                                    <p class="text-emerald-400 font-bold mb-1">Resultado:</p>
+                                    <p class="text-white font-semibold">30% → 42% conversión en 60 días <span
+                                            class="text-green-400 block text-xs mt-1">(+12 ventas/mes = $36K)</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-center text-slate-600 text-sm mt-12">*Identidades protegidas por acuerdos de
+                        confidencialidad.</p>
+                </div>
+            </section>
+
+            <!-- ROI Calculator Section -->
+            <section id="calculadora" class="py-24 bg-slate-950">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-5xl font-jakarta font-extrabold mb-4">¿Cuánto Estás Perdiendo Hoy?
+                        </h2>
+                    </div>
+
+                    <div class="glass-card p-8 rounded-2xl border border-slate-800">
+                        <h3 class="text-xl font-bold font-jakarta text-center mb-6">Calculadora de Ventas Perdidas</h3>
+
+                        <div class="grid gap-6 mb-8">
+                            <div>
+                                <label class="block text-slate-400 mb-2">¿Cuántos leads generás por semana? (Leads
+                                    totales, no agendas)</label>
+                                <input type="number" id="leads"
+                                    class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white focus:outline-none focus:border-blue-500"
+                                    placeholder="Ej: 100">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 mb-2">¿Cuántos no-shows tenés por semana?</label>
+                                <input type="number" id="noshows"
+                                    class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white focus:outline-none focus:border-blue-500"
+                                    placeholder="Ej: 10">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 mb-2">¿Cuál es tu ticket promedio?</label>
+                                <div class="relative">
+                                    <span class="absolute left-3 top-3 text-slate-500">$</span>
+                                    <input type="number" id="ticket"
+                                        class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 pl-8 text-white focus:outline-none focus:border-blue-500"
+                                        placeholder="Ej: 2000">
+                                </div>
+                            </div>
+                        </div>
+
+                        <button onclick="calculateROI()"
+                            class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl transition-all hover:scale-[1.02] shadow-lg shadow-blue-900/20 mb-8">
+                            CALCULAR
+                        </button>
+
+                        <div id="result"
+                            class="hidden bg-slate-800/50 p-6 rounded-xl border border-slate-700 text-center animate-fade-in">
+                            <p class="text-slate-400 mb-2">Estás perdiendo aproximadamente:</p>
+                            <div class="text-4xl font-extrabold text-red-400 mb-4" id="lost-amount">$0</div>
+                            <p class="text-slate-300 mb-6">Con Human Agents podrías recuperar mínimo <span
+                                    class="text-green-400 font-bold" id="recovered-amount">$0</span>.</p>
+
+                            <a href="#agenda"
+                                class="inline-block bg-[#38BDF8] hover:bg-sky-400 text-slate-950 px-8 py-3 rounded-full text-sm font-bold transition-all hover:scale-105 shadow-lg shadow-sky-500/20">
+                                Agendar Auditoría Para Recuperar Esa Plata
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    function calculateROI() {
+                        const leads = parseFloat(document.getElementById('leads').value) || 0;
+                        const noshows = parseFloat(document.getElementById('noshows').value) || 0;
+                        const ticket = parseFloat(document.getElementById('ticket').value) || 0;
+
+                        // Cálculo Semanal
+                        // 1. Leads: Asumimos mejora del 10% al 20% en agendas. (10% extra).
+                        // De esas agendas extra, cerramos el 30%. (10% * 30% = 3% de los leads totales).
+                        // User formula approximation: 1/30 * leads
+                        const weeklyGainFromLeads = leads * 0.03 * ticket;
+
+                        // 2. No-shows: Recuperamos 1 venta por cada 3 no-shows.
+                        const weeklyGainFromNoShows = (noshows / 3) * ticket;
+
+                        // Total Mensual (x4)
+                        const totalMonthlyGain = (weeklyGainFromLeads + weeklyGainFromNoShows) * 4;
+
+                        // Formatting
+                        const formattedTotal = '$' + totalMonthlyGain.toLocaleString('es-AR', { maximumFractionDigits: 0 });
+
+                        document.getElementById('lost-amount').innerText = formattedTotal;
+                        document.getElementById('recovered-amount').innerText = formattedTotal;
+                        document.getElementById('result').classList.remove('hidden');
+                    }
+                </script>
+            </section>
+
+            <!-- Comparison Table Section -->
+            <section class="py-24 bg-slate-900/30">
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-5xl font-jakarta font-extrabold mb-4">Tu Proceso Hoy vs Con Human
+                            Agents</h2>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="border-b border-slate-800">
+                                    <th class="py-4 text-left text-slate-500 w-1/3"></th>
+                                    <th class="py-4 text-center text-slate-400 text-xl font-bold w-1/3">Tu Proceso Hoy
+                                    </th>
+                                    <th
+                                        class="py-4 text-center text-blue-400 text-xl font-bold w-1/3 bg-blue-900/10 rounded-t-xl">
+                                        Con Human Agents</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-lg">
+                                <tr class="border-b border-slate-800/50">
+                                    <td class="py-6 text-slate-300 font-semibold">Tiempo de respuesta</td>
+                                    <td class="py-6 text-center text-slate-400">2-4 horas</td>
+                                    <td class="py-6 text-center text-white bg-blue-900/5 font-bold"><span
+                                            class="text-green-400">
+                                            < 30 segundos</span>
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-slate-800/50">
+                                    <td class="py-6 text-slate-300 font-semibold">Seguimiento</td>
+                                    <td class="py-6 text-center text-slate-400">Inconsistente</td>
+                                    <td class="py-6 text-center text-white bg-blue-900/5 font-bold">100% automático</td>
+                                </tr>
+                                <tr class="border-b border-slate-800/50">
+                                    <td class="py-6 text-slate-300 font-semibold">Tasa de contacto</td>
+                                    <td class="py-6 text-center text-slate-400">20-40%</td>
+                                    <td class="py-6 text-center text-white bg-blue-900/5 font-bold">60-80%</td>
+                                </tr>
+                                <tr class="border-b border-slate-800/50">
+                                    <td class="py-6 text-slate-300 font-semibold">No-shows</td>
+                                    <td class="py-6 text-center text-slate-400">30-40%</td>
+                                    <td class="py-6 text-center text-white bg-blue-900/5 font-bold">10-20%</td>
+                                </tr>
+                                <tr class="border-b border-slate-800/50">
+                                    <td class="py-6 text-slate-300 font-semibold">Carga de CRM</td>
+                                    <td class="py-6 text-center text-slate-400">6 hrs/semana</td>
+                                    <td class="py-6 text-center text-white bg-blue-900/5 font-bold">0 horas</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-6 text-slate-300 font-semibold">Costo mensual</td>
+                                    <td class="py-6 text-center text-slate-400">$2.000-$4.000<br /><span
+                                            class="text-sm">(1-2 setters)</span></td>
+                                    <td class="py-6 text-center text-white bg-blue-900/5 font-bold text-2xl">$XXX</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Process Section -->
+            <section id="proceso" class="py-24 bg-slate-900/30">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-20">
+                        <h2 class="text-3xl md:text-5xl font-jakarta font-extrabold mb-4">El camino al <span
+                                class="text-blue-500">Escalado Masivo.</span></h2>
+                        <p class="text-slate-400 text-lg max-w-2xl mx-auto">Implementamos tu agente en menos de 10 días,
+                            sin fricción para tu equipo actual.</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="relative group">
+                            <div
+                                class="text-6xl font-black font-jakarta text-slate-800 group-hover:text-blue-900/30 transition-colors mb-4">
+                                01</div>
+                            <h3 class="text-xl font-bold font-jakarta mb-3 group-hover:text-blue-400 transition-colors">
+                                Auditoría de Ventas</h3>
+                            <p class="text-slate-400 leading-relaxed">Analizamos tu funnel actual, scripts y CRM para
+                                identificar fugas de leads y cuellos de botella.</p>
+                            <div class="hidden lg:block absolute top-12 -right-4 w-8 h-[2px] bg-slate-800"></div>
+                        </div>
+                        <div class="relative group">
+                            <div
+                                class="text-6xl font-black font-jakarta text-slate-800 group-hover:text-blue-900/30 transition-colors mb-4">
+                                02</div>
+                            <h3 class="text-xl font-bold font-jakarta mb-3 group-hover:text-blue-400 transition-colors">
+                                Entrenamiento del Agente</h3>
+                            <p class="text-slate-400 leading-relaxed">Clonamos el conocimiento de tus mejores vendedores
+                                e inyectamos la lógica de cierre de Human Agents.</p>
+                            <div class="hidden lg:block absolute top-12 -right-4 w-8 h-[2px] bg-slate-800"></div>
+                        </div>
+                        <div class="relative group">
+                            <div
+                                class="text-6xl font-black font-jakarta text-slate-800 group-hover:text-blue-900/30 transition-colors mb-4">
+                                03</div>
+                            <h3 class="text-xl font-bold font-jakarta mb-3 group-hover:text-blue-400 transition-colors">
+                                Integración de Sistemas</h3>
+                            <p class="text-slate-400 leading-relaxed">Conectamos con WhatsApp, Instagram y tu CRM
+                                (Hubspot, Pipedrive, etc.) de forma invisible.</p>
+                            <div class="hidden lg:block absolute top-12 -right-4 w-8 h-[2px] bg-slate-800"></div>
+                        </div>
+                        <div class="relative group">
+                            <div
+                                class="text-6xl font-black font-jakarta text-slate-800 group-hover:text-blue-900/30 transition-colors mb-4">
+                                04</div>
+                            <h3 class="text-xl font-bold font-jakarta mb-3 group-hover:text-blue-400 transition-colors">
+                                Lanzamiento y Optimización</h3>
+                            <p class="text-slate-400 leading-relaxed">El agente empieza a vender. Monitorizamos en
+                                tiempo real para ajustar scripts y maximizar ROI.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="py-24 bg-slate-950">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl md:text-5xl font-jakarta font-extrabold mb-4">Preguntas Frecuentes</h2>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                            <h3 class="font-bold text-xl mb-3">¿Funciona con mi CRM? (HubSpot, Pipedrive, etc.)</h3>
+                            <p class="text-slate-400">Sí. Nos integramos con los 15 CRMs más usados en infoproductos. Si
+                                usás uno diferente, lo conectamos igual en menos de 48hs.</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                            <h3 class="font-bold text-xl mb-3">¿Qué pasa si mis leads no responden a la IA?</h3>
+                            <p class="text-slate-400">La IA contacta por WhatsApp, llamada y email de forma secuencial.
+                                Si después de 3 intentos inteligentes no responde, lo marca como "frío" y tu equipo
+                                decide si vale la pena insistir manualmente.</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                            <h3 class="font-bold text-xl mb-3">¿Cuánto tiempo tarda la implementación?</h3>
+                            <p class="text-slate-400">10 días hábiles desde la auditoría hasta que el sistema está
+                                vendiendo.<br />
+                                Día 1-3: Auditoría y entrenamiento<br />
+                                Día 4-7: Integración técnica<br />
+                                Día 8-10: Pruebas y lanzamiento</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                            <h3 class="font-bold text-xl mb-3">¿Qué pasa si no funciona?</h3>
+                            <p class="text-slate-400">Garantía de 45 días: Si no mejoramos tu tasa de contacto,
+                                asistencia a llamadas y conversión, seguimos trabajando
+                                gratis hasta que suceda. Sin letra chica.</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                            <h3 class="font-bold text-xl mb-3">¿Cuánto cuesta?</h3>
+                            <p class="text-slate-400">El sistema es a medida para cada caso, desde $300/mes (precio
+                                competitivo con 1 setter junior,
+                                pero con resultados de 3 seniors). Agenda tu auditoría para ver el pricing exacto según
+                                tu volumen de leads.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Live Demo Section with Embedded Chat -->
+            <section id="live-demo" class="py-24 bg-slate-900/50">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-5xl font-jakarta font-extrabold mb-4">Probá la IA en <span
+                                class="text-[#38BDF8]">Tiempo Real</span></h2>
+                        <div class="text-slate-400 text-lg max-w-2xl mx-auto mb-8">
+                            <p class="mb-4">Hablá con Sofía, nuestra agente de ventas IA. Si ella te convence en 2
+                                minutos, te agenda la auditoría.</p>
+                        </div>
+                    </div>
+
+                    <!-- HUMAN AGENTS - CHAT WIDGET IA (Embedded) -->
+                    <style>
+                        /* Variables CSS */
+                        :root {
+                            --ha-primary: #38BDF8;
+                            /* Sky-400 to match site theme */
+                            --ha-secondary: #0f172a;
+                            --ha-bg: #ffffff;
+                            --ha-text: #0f172a;
+                            --ha-border: #e2e8f0;
+                            --ha-shadow: 0 10px 40px rgba(56, 189, 248, 0.1);
+                        }
+
+                        /* Container del chat (Embedded Version) */
+                        #ha-chat-container {
+                            position: relative;
+                            width: 100%;
+                            max-width: 420px;
+                            height: 600px;
+                            margin: 0 auto;
+                            background: var(--ha-bg);
+                            border-radius: 20px;
+                            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+                            /* Deep dark shadow for pop */
+                            border: 1px solid rgba(255, 255, 255, 0.1);
+                            display: flex;
+                            flex-direction: column;
+                            overflow: hidden;
+                            font-family: 'Inter', sans-serif;
+                        }
+
+                        /* Header del chat */
+                        .ha-chat-header {
+                            background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%);
+                            color: white;
+                            padding: 20px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                        }
+
+                        .ha-header-info {
+                            display: flex;
+                            align-items: center;
+                            gap: 12px;
+                        }
+
+                        .ha-avatar {
+                            width: 45px;
+                            height: 45px;
+                            border-radius: 50%;
+                            background: rgba(255, 255, 255, 0.2);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 20px;
+                            border: 2px solid rgba(255, 255, 255, 0.3);
+                        }
+
+                        .ha-header-text h3 {
+                            margin: 0;
+                            font-size: 16px;
+                            font-weight: 600;
+                        }
+
+                        .ha-header-text p {
+                            margin: 2px 0 0;
+                            font-size: 13px;
+                            opacity: 0.9;
+                        }
+
+                        .ha-typing-indicator {
+                            display: none;
+                            align-items: center;
+                            gap: 4px;
+                            font-size: 13px;
+                        }
+
+                        .ha-typing-indicator.active {
+                            display: flex;
+                        }
+
+                        .ha-typing-dot {
+                            width: 4px;
+                            height: 4px;
+                            background: rgba(255, 255, 255, 0.8);
+                            border-radius: 50%;
+                            animation: ha-typing 1.4s infinite;
+                        }
+
+                        .ha-typing-dot:nth-child(2) {
+                            animation-delay: 0.2s;
+                        }
+
+                        .ha-typing-dot:nth-child(3) {
+                            animation-delay: 0.4s;
+                        }
+
+                        @keyframes ha-typing {
+
+                            0%,
+                            60%,
+                            100% {
+                                transform: translateY(0);
+                            }
+
+                            30% {
+                                transform: translateY(-8px);
+                            }
+                        }
+
+                        /* Área de mensajes */
+                        .ha-messages {
+                            flex: 1;
+                            overflow-y: auto;
+                            padding: 20px;
+                            background: #f8fafc;
+                        }
+
+                        .ha-message {
+                            display: flex;
+                            gap: 10px;
+                            margin-bottom: 16px;
+                            animation: ha-message-in 0.3s ease;
+                        }
+
+                        @keyframes ha-message-in {
+                            from {
+                                opacity: 0;
+                                transform: translateY(10px);
+                            }
+
+                            to {
+                                opacity: 1;
+                                transform: translateY(0);
+                            }
+                        }
+
+                        .ha-message.user {
+                            flex-direction: row-reverse;
+                        }
+
+                        .ha-message-avatar {
+                            width: 32px;
+                            height: 32px;
+                            border-radius: 50%;
+                            background: var(--ha-primary);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: white;
+                            font-size: 14px;
+                            flex-shrink: 0;
+                        }
+
+                        .ha-message.user .ha-message-avatar {
+                            background: var(--ha-secondary);
+                        }
+
+                        .ha-message-content {
+                            max-width: 75%;
+                        }
+
+                        .ha-message-bubble {
+                            background: white;
+                            padding: 12px 16px;
+                            border-radius: 16px;
+                            border-bottom-left-radius: 4px;
+                            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+                            font-size: 14px;
+                            line-height: 1.5;
+                            color: var(--ha-text);
+                            text-align: left;
+                        }
+
+                        .ha-message.user .ha-message-bubble {
+                            background: #0ea5e9;
+                            color: white;
+                            border-bottom-left-radius: 16px;
+                            border-bottom-right-radius: 4px;
+                        }
+
+                        .ha-message-time {
+                            font-size: 11px;
+                            color: #94a3b8;
+                            margin-top: 4px;
+                            padding: 0 4px;
+                        }
+
+                        /* Input area */
+                        .ha-input-area {
+                            padding: 16px 20px;
+                            background: white;
+                            border-top: 1px solid var(--ha-border);
+                            display: flex;
+                            gap: 10px;
+                            align-items: flex-end;
+                        }
+
+                        .ha-input-wrapper {
+                            flex: 1;
+                            position: relative;
+                        }
+
+                        #ha-message-input {
+                            width: 100%;
+                            padding: 12px 16px;
+                            border: 2px solid var(--ha-border);
+                            border-radius: 24px;
+                            font-size: 14px;
+                            font-family: inherit;
+                            resize: none;
+                            max-height: 100px;
+                            transition: border-color 0.2s ease;
+                            color: #0f172a;
+                            background: white;
+                        }
+
+                        #ha-message-input:focus {
+                            outline: none;
+                            border-color: var(--ha-primary);
+                        }
+
+                        #ha-send-btn {
+                            width: 44px;
+                            height: 44px;
+                            border-radius: 50%;
+                            background: #0ea5e9;
+                            border: none;
+                            color: white;
+                            cursor: pointer;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            transition: all 0.2s ease;
+                            flex-shrink: 0;
+                        }
+
+                        #ha-send-btn:hover:not(:disabled) {
+                            background: #0284c7;
+                            transform: scale(1.05);
+                        }
+
+                        #ha-send-btn:disabled {
+                            opacity: 0.5;
+                            cursor: not-allowed;
+                        }
+
+                        /* Mensaje de bienvenida inicial */
+                        .ha-welcome {
+                            text-align: center;
+                            padding: 40px 20px;
+                        }
+
+                        .ha-welcome-icon {
+                            width: 80px;
+                            height: 80px;
+                            margin: 0 auto 20px;
+                            background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%);
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: white;
+                            font-size: 40px;
+                        }
+
+                        .ha-welcome h3 {
+                            margin: 0 0 8px;
+                            font-size: 20px;
+                            color: var(--ha-text);
+                            font-weight: 700;
+                        }
+
+                        .ha-welcome p {
+                            margin: 0;
+                            font-size: 14px;
+                            color: #64748b;
+                            line-height: 1.6;
+                        }
+                    </style>
+
+                    <!-- Container del chat -->
+                    <div id="ha-chat-container">
+                        <!-- Header -->
+                        <div class="ha-chat-header">
+                            <div class="ha-header-info">
+                                <div class="ha-avatar">🤖</div>
+                                <div class="ha-header-text text-left">
+                                    <h3>Sofía - Asistente IA</h3>
+                                    <p>En línea</p>
+                                    <div class="ha-typing-indicator">
+                                        <span>escribiendo</span>
+                                        <div class="ha-typing-dot"></div>
+                                        <div class="ha-typing-dot"></div>
+                                        <div class="ha-typing-dot"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Área de mensajes -->
+                        <div class="ha-messages" id="ha-messages">
+                            <div class="ha-welcome">
+                                <div class="ha-welcome-icon">🤖</div>
+                                <h3>Probá la IA en Tiempo Real</h3>
+                                <p>Hablá 2 minutos conmigo. Si te convenzo, yo misma te agendo la auditoría.</p>
+                            </div>
+                        </div>
+
+                        <!-- Input -->
+                        <div class="ha-input-area">
+                            <div class="ha-input-wrapper">
+                                <textarea id="ha-message-input" placeholder="Escribí tu mensaje..." rows="1"></textarea>
+                            </div>
+                            <button id="ha-send-btn" aria-label="Enviar mensaje">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <script>
+                        // CONFIGURACIÓN
+                        const HA_CONFIG = {
+                            webhookUrl: 'https://n8n.humanagents.cloud/webhook/403de1a8-5107-47e1-98ad-97d504fac466/chat',
+                            initialMessage: true,
+                            initialMessageDelay: 1000
+                        };
+
+                        // Estado global
+                        let conversationId = null;
+                        let isProcessing = false;
+
+                        // Generar ID único de conversación
+                        function generateConversationId() {
+                            return 'conv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+                        }
+
+                        // Obtener o crear conversation_id
+                        function getConversationId() {
+                            if (!conversationId) {
+                                conversationId = localStorage.getItem('ha_conversation_id');
+                                if (!conversationId) {
+                                    conversationId = generateConversationId();
+                                    localStorage.setItem('ha_conversation_id', conversationId);
+                                }
+                            }
+                            return conversationId;
+                        }
+
+                        // Elementos DOM
+                        const chatContainer = document.getElementById('ha-chat-container');
+                        const messagesContainer = document.getElementById('ha-messages');
+                        const messageInput = document.getElementById('ha-message-input');
+                        const sendBtn = document.getElementById('ha-send-btn');
+                        const typingIndicator = document.querySelector('.ha-typing-indicator');
+
+                        // Initial Load
+                        document.addEventListener('DOMContentLoaded', () => {
+                            if (HA_CONFIG.initialMessage) {
+                                setTimeout(() => {
+                                    // Only add welcome text if it's the first message
+                                    if (messagesContainer.children.length <= 1) { // 1 is the welcome div
+                                        addMessage('ai', 'Hola! Soy Sofía, la asistente de ventas de Human Agents 👋\n\nAntes de agendarte una auditoría, necesito hacerte unas preguntas rápidas para ver si tiene sentido para tu caso.\n\n¿Dale? (Solo 2 minutos)');
+                                    }
+                                }, HA_CONFIG.initialMessageDelay);
+                            }
+                        });
+
+
+                        // Auto-resize del textarea
+                        messageInput.addEventListener('input', function () {
+                            this.style.height = 'auto';
+                            this.style.height = (this.scrollHeight) + 'px';
+                        });
+
+                        // Enviar mensaje con Enter (Shift+Enter para nueva línea)
+                        messageInput.addEventListener('keydown', function (e) {
+                            if (e.key === 'Enter' && !e.shiftKey) {
+                                e.preventDefault();
+                                sendMessage();
+                            }
+                        });
+
+                        // Enviar mensaje con botón
+                        sendBtn.addEventListener('click', sendMessage);
+
+                        // Función para agregar mensaje al chat
+                        function addMessage(sender, text) {
+                            // Remover mensaje de bienvenida visual si existe
+                            const welcome = messagesContainer.querySelector('.ha-welcome');
+                            if (welcome) {
+                                welcome.remove();
+                            }
+
+                            const messageDiv = document.createElement('div');
+                            messageDiv.className = `ha-message ${sender}`;
+
+                            const avatar = document.createElement('div');
+                            avatar.className = 'ha-message-avatar';
+                            avatar.textContent = sender === 'ai' ? '🤖' : '👤';
+
+                            const content = document.createElement('div');
+                            content.className = 'ha-message-content';
+
+                            const bubble = document.createElement('div');
+                            bubble.className = 'ha-message-bubble';
+                            bubble.innerHTML = text.replace(/\n/g, '<br>'); // Simple newline formatting
+
+                            const time = document.createElement('div');
+                            time.className = 'ha-message-time';
+                            time.textContent = new Date().toLocaleTimeString('es-AR', { hour: '2-digit', minute: '2-digit' });
+
+                            content.appendChild(bubble);
+                            content.appendChild(time);
+                            messageDiv.appendChild(avatar);
+                            messageDiv.appendChild(content);
+                            messagesContainer.appendChild(messageDiv);
+
+                            // Scroll al final
+                            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                        }
+
+                        // Mostrar indicador de escritura
+                        function showTyping() {
+                            typingIndicator.classList.add('active');
+                            document.querySelector('.ha-header-text > p').style.display = 'none';
+                        }
+
+                        // Ocultar indicador de escritura
+                        function hideTyping() {
+                            typingIndicator.classList.remove('active');
+                            document.querySelector('.ha-header-text > p').style.display = 'block';
+                        }
+
+                        // Enviar mensaje a N8N
+                        async function sendMessage() {
+                            const text = messageInput.value.trim();
+                            if (!text || isProcessing) return;
+
+                            // Agregar mensaje del usuario
+                            addMessage('user', text);
+                            messageInput.value = '';
+                            messageInput.style.height = 'auto';
+
+                            // Deshabilitar input
+                            isProcessing = true;
+                            sendBtn.disabled = true;
+                            messageInput.disabled = true;
+                            showTyping();
+
+                            try {
+                                const response = await fetch(HA_CONFIG.webhookUrl, {
+                                    method: 'POST',
+                                    headers: {
+                                        'Content-Type': 'application/json',
+                                    },
+                                    body: JSON.stringify({
+                                        message: text,
+                                        conversation_id: getConversationId(),
+                                        timestamp: new Date().toISOString(),
+                                        metadata: {
+                                            url: window.location.href,
+                                            referrer: document.referrer
+                                        }
+                                    })
+                                });
+
+                                if (!response.ok) {
+                                    throw new Error('Error en la respuesta del servidor');
+                                }
+
+                                const data = await response.json();
+
+                                // Simular delay natural de escritura (opcional, ajustado para no ser muy lento)
+                                const typingDelay = Math.min(data.response ? data.response.length * 10 : 500, 1500);
+                                await new Promise(resolve => setTimeout(resolve, typingDelay));
+
+                                hideTyping();
+
+                                // Agregar respuesta de la IA (N8N debe devolver { "response": "texto" })
+                                if (data.response) {
+                                    addMessage('ai', data.response);
+                                } else if (data.output) { // Fallback if format is different
+                                    addMessage('ai', typeof data.output === 'string' ? data.output : JSON.stringify(data.output));
+                                } else {
+                                    addMessage('ai', "Mensaje recibido (sin respuesta de texto del sistema).");
+                                }
+
+
+                            } catch (error) {
+                                console.error('Error:', error);
+                                hideTyping();
+                                addMessage('ai', 'Perdón, hubo un error conectando con el servidor. ¿Podés intentar de nuevo?');
+                            } finally {
+                                isProcessing = false;
+                                sendBtn.disabled = false;
+                                messageInput.disabled = false;
+                                messageInput.focus();
+                            }
+                        }
+                    </script>
+                </div>
+            </section>
+        </div>
+
+        <!-- Legal Sections (hidden by default) -->
+        <div id="legal-aviso" class="legal-section pt-32 pb-20 max-w-4xl mx-auto px-4">
+            <button onclick="showHome()"
+                class="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors mb-12 group">
+                <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Volver al Inicio
+            </button>
+
+            <h1 class="text-4xl md:text-5xl font-jakarta font-extrabold mb-12 text-white">Aviso Legal</h1>
+
+            <div class="glass-card p-8 md:p-12 rounded-3xl border border-slate-800">
+                <div class="space-y-6 text-slate-300">
+                    <p>En cumplimiento con el deber de información recogido en el artículo 10 de la Ley 34/2002, de 11
+                        de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSI-CE), se
+                        facilitan los siguientes datos:</p>
+                    <div>
+                        <h3 class="text-white font-bold mb-2">1. Datos Identificativos</h3>
+                        <p>El titular del dominio web es HUMAN AGENTS S.L. (en adelante, HUMAN AGENTS), con domicilio a
+                            estos efectos en Madrid, España. Correo electrónico de contacto: hola@humanagents.ai.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold mb-2">2. Usuarios</h3>
+                        <p>El acceso y/o uso de este portal atribuye la condición de USUARIO, que acepta, desde dicho
+                            acceso y/o uso, las Condiciones Generales de Uso aquí reflejadas.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold mb-2">3. Uso del Portal</h3>
+                        <p>Este sitio proporciona el acceso a multitud de informaciones, servicios o datos en Internet
+                            pertenecientes a HUMAN AGENTS. El USUARIO asume la responsabilidad del uso del portal. Dicha
+                            responsabilidad se extiende al registro que fuese necesario para acceder a determinados
+                            servicios o contenidos.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold mb-2">4. Tecnología de IA</h3>
+                        <p>HUMAN AGENTS informa que los servicios prestados utilizan modelos de Inteligencia Artificial
+                            para la interacción conversacional. HUMAN AGENTS no se hace responsable de las
+                            interpretaciones subjetivas que el usuario pueda derivar de estas interacciones automáticas,
+                            aunque se garantiza un entrenamiento basado en estándares de alta calidad profesional.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center text-slate-500 text-sm">
+                Última actualización: Mayo 2024
+            </div>
+        </div>
+
+        <div id="legal-privacidad" class="legal-section pt-32 pb-20 max-w-4xl mx-auto px-4">
+            <button onclick="showHome()"
+                class="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors mb-12 group">
+                <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Volver al Inicio
+            </button>
+
+            <h1 class="text-4xl md:text-5xl font-jakarta font-extrabold mb-12 text-white">Política de Privacidad</h1>
+
+            <div class="glass-card p-8 md:p-12 rounded-3xl border border-slate-800">
+                <div class="space-y-6 text-slate-300">
+                    <p>HUMAN AGENTS está comprometida con la protección de la privacidad de sus usuarios. Esta Política
+                        de Privacidad describe cómo recopilamos, usamos y protegemos sus datos personales conforme al
+                        Reglamento General de Protección de Datos (RGPD).</p>
+                    <div>
+                        <h3 class="text-white font-bold mb-2">1. Responsable del Tratamiento</h3>
+                        <p>Identidad: HUMAN AGENTS S.L. - Correo: privacidad@humanagents.ai</p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold mb-2">2. Finalidad del Tratamiento</h3>
+                        <p>Tratamos la información que nos facilita con el fin de prestarle el servicio solicitado,
+                            realizar la gestión administrativa necesaria y, en caso de consentimiento, enviarle
+                            comunicaciones comerciales sobre nuestros servicios de IA en ventas.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold mb-2">3. Conservación de Datos</h3>
+                        <p>Los datos se conservarán mientras se mantenga la relación comercial o durante los años
+                            necesarios para cumplir con las obligaciones legales.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold mb-2">4. Legitimación</h3>
+                        <p>La base legal para el tratamiento de sus datos es el consentimiento del interesado al
+                            completar el formulario de contacto o agendar una llamada.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold mb-2">5. Destinatarios</h3>
+                        <p>Los datos no se cederán a terceros salvo en los casos en que exista una obligación legal o
+                            sea necesario para la prestación del servicio (por ejemplo, proveedores de infraestructura
+                            en la nube o servicios de IA con los que HUMAN AGENTS mantiene acuerdos de
+                            confidencialidad).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center text-slate-500 text-sm">
+                Última actualización: Mayo 2024
+            </div>
+        </div>
+
+        <div id="legal-cookies" class="legal-section pt-32 pb-20 max-w-4xl mx-auto px-4">
+            <button onclick="showHome()"
+                class="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors mb-12 group">
+                <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Volver al Inicio
+            </button>
+
+            <h1 class="text-4xl md:text-5xl font-jakarta font-extrabold mb-12 text-white">Política de Cookies</h1>
+
+            <div class="glass-card p-8 md:p-12 rounded-3xl border border-slate-800">
+                <div class="space-y-6 text-slate-300">
+                    <p>Una cookie es un pequeño fichero de texto que se almacena en su navegador cuando visita casi
+                        cualquier página web. Su utilidad es que la web sea capaz de recordar su visita cuando vuelva a
+                        navegar por esa página.</p>
+                    <div>
+                        <h3 class="text-white font-bold mb-2">1. Cookies utilizadas en este sitio web</h3>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>Cookies técnicas:</strong> Son las más básicas y permiten, entre otras cosas,
+                                saber cuándo está navegando un humano o una aplicación automatizada para la correcta
+                                gestión de los formularios de contacto.</li>
+                            <li><strong>Cookies de análisis:</strong> Son aquellas que, tratadas por nosotros o por
+                                terceros, nos permiten cuantificar el número de usuarios y así realizar la medición y
+                                análisis estadístico de la utilización que hacen los usuarios del servicio ofertado.
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold mb-2">2. Desactivación o eliminación de cookies</h3>
+                        <p>En cualquier momento podrá ejercer su derecho de desactivación o eliminación de cookies de
+                            este sitio web. Estas acciones se realizan de forma diferente en función del navegador que
+                            esté usando.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold mb-2">3. Notas adicionales</h3>
+                        <p>Ni esta web ni sus representantes legales se hacen responsables ni del contenido ni de la
+                            veracidad de las políticas de privacidad que puedan tener los terceros mencionados en esta
+                            política de cookies.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center text-slate-500 text-sm">
+                Última actualización: Mayo 2024
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-16 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex flex-col items-center md:items-start leading-none">
+                    <span class="text-xl font-extrabold font-jakarta tracking-tight text-white">HUMAN</span>
+                    <span class="text-xl font-medium font-jakarta tracking-tight text-[#38BDF8]">AGENTS</span>
+                </div>
+
+                <div class="flex gap-8 text-sm text-slate-500">
+                    <button onclick="showLegal('aviso')" class="hover:text-white transition-colors cursor-pointer">Aviso
+                        Legal</button>
+                    <button onclick="showLegal('privacidad')"
+                        class="hover:text-white transition-colors cursor-pointer">Privacidad</button>
+                    <button onclick="showLegal('cookies')"
+                        class="hover:text-white transition-colors cursor-pointer">Cookies</button>
+                </div>
+
+                <div class="text-slate-500 text-sm">
+                    ©
+                    <script>document.write(new Date().getFullYear())</script> Human Agents. Transformando las ventas con
+                    IA.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.remove('bg-transparent', 'py-6');
+                navbar.classList.add('bg-slate-950/90', 'backdrop-blur-md', 'border-b', 'border-slate-800/50', 'py-3');
+            } else {
+                navbar.classList.remove('bg-slate-950/90', 'backdrop-blur-md', 'border-b', 'border-slate-800/50', 'py-3');
+                navbar.classList.add('bg-transparent', 'py-6');
+            }
+        });
+
+        // Navigation functions
+        function showHome() {
+            document.getElementById('home-content').style.display = 'block';
+            document.querySelectorAll('.legal-section').forEach(el => el.classList.remove('active'));
+            window.scrollTo(0, 0);
+        }
+
+        function showLegal(type) {
+            document.getElementById('home-content').style.display = 'none';
+            document.querySelectorAll('.legal-section').forEach(el => el.classList.remove('active'));
+            document.getElementById('legal-' + type).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+
+</html>
