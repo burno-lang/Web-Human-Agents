@@ -1149,6 +1149,7 @@
                                     method: 'POST',
                                     headers: {
                                         'Content-Type': 'application/json',
+                                        'Accept': 'application/json'
                                     },
                                     body: JSON.stringify({
                                         message: text,
@@ -1162,31 +1163,33 @@
                                 });
 
                                 if (!response.ok) {
-                                    throw new Error('Error en la respuesta del servidor');
+                                    const errorText = await response.text();
+                                    console.error('Server error details:', errorText);
+                                    throw new Error(`Error del servidor (${response.status})`);
                                 }
 
                                 const data = await response.json();
 
-                                // Simular delay natural de escritura (opcional, ajustado para no ser muy lento)
+                                // Simular delay natural de escritura
                                 const typingDelay = Math.min(data.response ? data.response.length * 10 : 500, 1500);
                                 await new Promise(resolve => setTimeout(resolve, typingDelay));
 
                                 hideTyping();
 
-                                // Agregar respuesta de la IA (N8N debe devolver { "response": "texto" })
+                                // Agregar respuesta de la IA
                                 if (data.response) {
                                     addMessage('ai', data.response);
-                                } else if (data.output) { // Fallback if format is different
+                                } else if (data.output) {
                                     addMessage('ai', typeof data.output === 'string' ? data.output : JSON.stringify(data.output));
                                 } else {
-                                    addMessage('ai', "Mensaje recibido (sin respuesta de texto del sistema).");
+                                    // Fallback text if JSON is empty or weird
+                                    addMessage('ai', data.text || "Mensaje recibido.");
                                 }
 
-
                             } catch (error) {
-                                console.error('Error:', error);
+                                console.error('Fetch error:', error);
                                 hideTyping();
-                                addMessage('ai', 'Perdón, hubo un error conectando con el servidor. ¿Podés intentar de nuevo?');
+                                addMessage('ai', 'Lo siento, no pude conectar con el servidor. Por favor verificá tu conexión.');
                             } finally {
                                 isProcessing = false;
                                 sendBtn.disabled = false;
