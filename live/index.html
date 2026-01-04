@@ -149,20 +149,25 @@
                             seguimos trabajando gratis hasta que suceda.
                         </p>
 
-                        <div class="flex flex-col items-center gap-3">
-                            <a href="#agenda"
-                                class="group flex items-center justify-center gap-2 bg-[#38BDF8] hover:bg-sky-400 text-slate-950 px-8 py-4 rounded-xl text-lg font-bold transition-all hover:scale-105 shadow-lg shadow-sky-900/20 w-full sm:w-auto">
-                                Agendar Auditoría Gratuita de Ventas
-                                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 5l7 7-7 7"></path>
-                                </svg>
+                        <div class="flex flex-col items-center gap-4">
+                            <a href="#live-demo"
+                                class="group flex flex-col items-center justify-center gap-1 bg-[#38BDF8] hover:bg-sky-400 text-slate-950 px-8 py-4 rounded-xl transition-all hover:scale-105 shadow-lg shadow-sky-900/20 w-full sm:w-auto text-center">
+                                <div class="flex items-center gap-2 text-xl font-black">
+                                    <span>🤖</span> Hablá con Nuestra IA Ahora
+                                </div>
+                                <span class="text-sm font-semibold opacity-90">(Si te convence, ella te agenda la
+                                    auditoría)</span>
                             </a>
-                            <p class="text-slate-400 text-sm">(Descubrimos dónde perdés ventas y cuánto podés recuperar)
+
+                            <p class="text-slate-400 text-sm flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                                Conversación real en tiempo real. Sin registro previo.
                             </p>
-                            <p class="text-amber-400 font-semibold animate-pulse mt-2">⏱️ Solo quedan 8 cupos esta
-                                semana</p>
+
+                            <a href="../index.html#agenda"
+                                class="mt-2 text-slate-500 hover:text-white transition-colors text-sm border-b border-transparent hover:border-white">
+                                ¿Preferís agendar directo? Click acá →
+                            </a>
                         </div>
 
                         <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-slate-800 pt-12">
@@ -645,13 +650,44 @@
             <!-- Live Demo Section with Embedded Chat -->
             <section id="live-demo" class="py-24 bg-slate-900/50">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="text-center mb-12">
-                        <h2 class="text-3xl md:text-5xl font-jakarta font-extrabold mb-4">Probá la IA en <span
-                                class="text-[#38BDF8]">Tiempo Real</span></h2>
-                        <div class="text-slate-400 text-lg max-w-2xl mx-auto mb-8">
-                            <p class="mb-4">Hablá con Sofía, nuestra agente de ventas IA. Si ella te convence en 2
-                                minutos, te agenda la auditoría.</p>
+                    <div class="max-w-3xl mx-auto text-center mb-12">
+                        <div
+                            class="inline-block px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-semibold mb-6">
+                            Prueba Interactiva
                         </div>
+                        <h2 class="text-3xl md:text-5xl font-jakarta font-extrabold mb-8">
+                            Probalo Vos Mismo: Hablá Con <br /><span class="text-[#38BDF8]">La IA Que Vende Por
+                                Vos</span>
+                        </h2>
+
+                        <div class="text-left bg-slate-800/30 border border-slate-700/50 p-8 rounded-2xl mb-8">
+                            <p class="text-slate-300 text-lg mb-6 leading-relaxed">
+                                No te pido que confíes en nuestra palabra. Hablá 2 minutos con la misma IA que usarías
+                                en tu negocio.
+                            </p>
+                            <p class="text-white font-semibold mb-4">Ella va a:</p>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start gap-3">
+                                    <span class="text-green-400 mt-1">✓</span>
+                                    <span class="text-slate-400">Hacerte preguntas para entender tu situación</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-green-400 mt-1">✓</span>
+                                    <span class="text-slate-400">Identificar si estás perdiendo ventas (y cuánto)</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-green-400 mt-1">✓</span>
+                                    <span class="text-slate-400">Agendarte la auditoría si tiene sentido para tu
+                                        caso</span>
+                                </li>
+                            </ul>
+                            <p class="text-slate-400 text-sm italic border-t border-slate-700/50 pt-4">
+                                Si no te convence la conversación... simplemente no agendás.
+                            </p>
+                        </div>
+
+                        <p class="text-amber-400 font-semibold animate-pulse">⏱️ Sin registro. Sin formularios. Solo una
+                            conversación real.</p>
                     </div>
 
                     <!-- HUMAN AGENTS - CHAT WIDGET IA (Embedded) -->
