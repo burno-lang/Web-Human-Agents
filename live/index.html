@@ -1056,7 +1056,7 @@
                                 setTimeout(() => {
                                     // Only add welcome text if it's the first message
                                     if (messagesContainer.children.length <= 1) { // 1 is the welcome div
-                                        addMessage('ai', 'Hola! Soy Sofía, la asistente de ventas de Human Agents 👋\n\nAntes de agendarte una auditoría, necesito hacerte unas preguntas rápidas para ver si tiene sentido para tu caso.\n\n¿Dale? (Solo 2 minutos)');
+                                        addMessage('ai', 'Hola, soy SofíA, la asistente de Human Agents👋 A ver si te animas a ponerme a prueba');
                                     }
                                 }, HA_CONFIG.initialMessageDelay);
                             }
@@ -1145,21 +1145,25 @@
                             showTyping();
 
                             try {
+                                // N8N Chat Trigger standard payload
+                                const payload = {
+                                    action: "sendMessage",
+                                    sessionId: getConversationId(),
+                                    chatInput: text,
+                                    // Keep metadata in case custom logic uses it, but outside main fields 
+                                    metadata: {
+                                        url: window.location.href,
+                                        referrer: document.referrer
+                                    }
+                                };
+
                                 const response = await fetch(HA_CONFIG.webhookUrl, {
                                     method: 'POST',
                                     headers: {
                                         'Content-Type': 'application/json',
                                         'Accept': 'application/json'
                                     },
-                                    body: JSON.stringify({
-                                        message: text,
-                                        conversation_id: getConversationId(),
-                                        timestamp: new Date().toISOString(),
-                                        metadata: {
-                                            url: window.location.href,
-                                            referrer: document.referrer
-                                        }
-                                    })
+                                    body: JSON.stringify(payload)
                                 });
 
                                 if (!response.ok) {
@@ -1171,25 +1175,32 @@
                                 const data = await response.json();
 
                                 // Simular delay natural de escritura
-                                const typingDelay = Math.min(data.response ? data.response.length * 10 : 500, 1500);
+                                // Standard n8n chat response often has 'output' or 'text'
+                                // data = { output: "Hello" } or data = { text: "Hello" } or data = [ { text: "..." } ]
+
+                                let aiResponse = '';
+                                if (data.output) {
+                                    aiResponse = data.output;
+                                } else if (data.text) {
+                                    aiResponse = data.text;
+                                } else if (Array.isArray(data) && data[0] && data[0].text) {
+                                    aiResponse = data[0].text;
+                                } else if (data.response) { // Conversational response custom mapping
+                                    aiResponse = data.response;
+                                } else {
+                                    aiResponse = JSON.stringify(data);
+                                }
+
+                                const typingDelay = Math.min(aiResponse.length * 10, 1500);
                                 await new Promise(resolve => setTimeout(resolve, typingDelay));
 
                                 hideTyping();
-
-                                // Agregar respuesta de la IA
-                                if (data.response) {
-                                    addMessage('ai', data.response);
-                                } else if (data.output) {
-                                    addMessage('ai', typeof data.output === 'string' ? data.output : JSON.stringify(data.output));
-                                } else {
-                                    // Fallback text if JSON is empty or weird
-                                    addMessage('ai', data.text || "Mensaje recibido.");
-                                }
+                                addMessage('ai', aiResponse);
 
                             } catch (error) {
                                 console.error('Fetch error:', error);
                                 hideTyping();
-                                addMessage('ai', 'Lo siento, no pude conectar con el servidor. Por favor verificá tu conexión.');
+                                addMessage('ai', 'Lo siento, no pude conectar con el servidor.');
                             } finally {
                                 isProcessing = false;
                                 sendBtn.disabled = false;
